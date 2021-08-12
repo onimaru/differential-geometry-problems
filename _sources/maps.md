@@ -4,7 +4,6 @@
 Fonte: nakahara2018geometry
 
 1. Seja $f: \mathbb{R} \rightarrow \mathbb{R}$ dado por $f(x) = \sin{x}$ ou $f: x \Rightarrow \sin{x}$. Determine o domínio, alcance, imagem e imagem inversa de $0$.  
-
 **Solução**: O domínio e a imagem são $\mathbb{R}$, já a imagem é $f(\mathbb{R}) = \left[-1,1 \right]$. Para a imagem inversa de $0$ vemos que existem diversos valores de $x$ que produzem $\sin{x}=0$, todos esses valores são múltiplos inteiros de $\pi$. Então escrevemos $f^{-1}(0) = \lbrace n \pi \vert n \in \mathbb{Z} \rbrace$.
 
 2. Classifique os mapas a seguir como injetivos, sobrejetivos ou bijetivo:
