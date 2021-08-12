@@ -1,12 +1,12 @@
 # Definições
 
 **Mapa**: um mapa $\phi$ é uma regra que atribui para cada $y \in Y$ um $x \in X$, denotado por $\phi: X \rightarrow Y$.
-O conjunto $Y$ é chamado de **alcance** (range) do mapa, o conjunto $X$ é chamado de **domínio** de $\phi$ e a **imagem** de $\phi$ é o conjunto $\phi(x) = \lbrace y \in Y | \phi(x) = y, \forall x \in X \rbrace$.
+O conjunto $Y$ é chamado de **alcance** (range) do mapa, o conjunto $X$ é chamado de **domínio** de $\phi$ e a **imagem** de $\phi$ é o conjunto $\phi(x) = \lbrace y \in Y | \phi(x) = y,\ \forall x \in X \rbrace$.
 
-**Um-a-um**: um mapa é chamado de um-a-um (1-1) se para cada $y \in Y$ existe somente um $x \in X$ tal que para $x, x' \in X, x \ne x' \Longrightarrow f(x) \ne f(x')$.
+**Um-a-um** ou **injetivo**: um mapa é chamado de um-a-um (1-1) se para cada $y \in Y$ existe somente um $x \in X$ tal que para $x, x' \in X, x \ne x' \Longrightarrow f(x) \ne f(x')$.
 
 
-**Sobrejetivo**: um mapa é chamado de sobrejetivo se para cada $y \in Y$ existe pelo menos um $x \in X$. É comum
+**Sobrejetivo**: um mapa é chamado de sobrejetivo (onto) se para cada $y \in Y$ existe pelo menos um $x \in X$. É comum
 dizer apenas ”$\phi$ é um mapa de $X$ sobre $Y$.”
 
 **Bijetivo**: um mapa é dito bijetivo ou que é uma bijeção se é tanto 1-1 quanto sobrejetivo.
@@ -15,6 +15,25 @@ dizer apenas ”$\phi$ é um mapa de $X$ sobre $Y$.”
 
 **Mapa constante**: um mapa é chamado de constante se existe um $y_{0} \in Y$ ﬁxo para um $x \in X$ arbitrário, $\phi(x) = y_{0}$.
 
+**Restrição**: dado um subconjunto $A \subset X$, uma restrição de um mapa $\phi: X \rightarrow Y$ é $\phi|_{A}: A \rightarrow Y$ .
+
+**Mapa composto**: dados os mapas $\phi: X \rightarrow Y$ e $\psi: Y \rightarrow Z$, o mapa composto é $\psi \circ \phi : X \rightarrow Z$, também denotado como $\psi(\phi(x)) = z$.
+
+**Diagrama comutativo**: se os mapas $\lambda \circ \phi : X \rightarrow E$ e $\mu \circ \psi : X \rightarrow E$ são equivalentes se existe um mapa
+$\rho : X \rightarrow E$, então dizemos que o diagrama representando estes mapeamentos comutam.
+
+**Mapa de inclusão**: dado um subconjunto $A \subset X$, o mapa $i : A \rightarrow X$ deﬁnido como $i(a) = a\ \forall a \in A$ é
+chamado de mapa de inclusão, também denotado como $i : A \xhookrightarrow{} X$.
+
+**Mapa identidade**: dado o mapa de inclusão, se $A = X$ o mapa é chamado de mapa identidade (ou mapa de identidade), $id_{X} : X \rightarrow X$.
+
+**Mapa inverso**: se um mapa $\phi : X \rightarrow Y$ é bijetivo existe um mapa inverso, $\phi^{-1} : Y \rightarrow X$, tal que $\phi^{-1} : \phi(x) \rightarrow x$ é também bijetivo. Como consequência $\phi^{-1} \circ \phi = id_{X}$ e $\phi \circ \phi^{-1} = id_{Y}$.
+
+**Mapa n-ário**: é o mapa $\phi : X^{n} \rightarrow Y$, deﬁnido como $\phi : (x_{1}, x_{2}, ..., x_{n}) \rightarrow y$.
+
+**Mapa de projeção**: é um mapa n-ário $pr_{i} : X_{1} \times X_{2} \times ... \times X_{n} \rightarrow X_{i}$ , deﬁnido como $pr_{i} : (x_{1}, ..., x_{n}) \rightarrow x_{i}$.
+
+**Mapa característico**: dado um subconjunto $A \subset X$, um mapa $\chi_{A} : X \rightarrow {0, 1}$ é dito característico de $A$, deﬁnido como $\chi_{A} (x) = 0$ se $x \notin A$ e $\chi_{A} (x) = 1$ se $x \in A$.
 
 **Categoria**: uma categoria é composta de três coisas:
 
