@@ -1,3 +1,4 @@
+(definitions)=
 # Definições
 
 **Mapa**: um mapa $\phi$ é uma regra que atribui para cada $y \in Y$ um $x \in X$, denotado por $\phi: X \rightarrow Y$.

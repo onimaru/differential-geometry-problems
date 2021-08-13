@@ -1,8 +1,5 @@
 # Mapas
 
-
-Fonte: nakahara2018geometry
-
 1 - Seja $f: \mathbb{R} \rightarrow \mathbb{R}$ dado por $f(x) = \sin{x}$ ou $f: x \Rightarrow \sin{x}$. Determine o domínio, alcance, imagem e imagem inversa de $0$. 
  
 **Solução**: O domínio e a imagem são $\mathbb{R}$, já a imagem é $f(\mathbb{R}) = \left[-1,1 \right]$. Para a imagem inversa de $0$ vemos que existem diversos valores de $x$ que produzem $\sin{x}=0$, todos esses valores são múltiplos inteiros de $\pi$. Então escrevemos $f^{-1}(0) = \lbrace n \pi \vert n \in \mathbb{Z} \rbrace$.
@@ -51,11 +48,9 @@ Já para o caso da multiplicação $ab = a \cdot b$, temos $f(a \cdot b) = (a \c
 
 <br/>
 
----
-Fonte: gadea2012analysis.
+<!-- Fonte: gadea2012analysis. -->
 
 7 - Considere o mapa: $f: \mathbb{R}^{2} \rightarrow \mathbb{R},\ \ \ (x,y) \Rightarrow x^{3} + xy + y^{3} + 1$  
    1. Calcule o mapa $f_{*}: T_{p}\mathbb{R}^{2} \rightarrow T_{p(p)}\mathbb{R}$.  
    2. Para quais dos pontos $(0,0),\ (1/3,1/3),\ (-1/3,-1/3)$, é $f_{*}$ é injetiva or sobrejetiva?
 
----
