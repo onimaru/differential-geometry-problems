@@ -43,7 +43,7 @@
     <script src="_static/copybutton.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
     <script >
@@ -55,7 +55,7 @@
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Definições" href="definitions.html" />
-    <link rel="prev" title="Variedades diferenciaveis" href="differentiable-manifolds.html" />
+    <link rel="prev" title="Variedades diferenciaveis_" href="differentiable-manifolds-nb.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -106,6 +106,11 @@
  <li class="toctree-l1">
   <a class="reference internal" href="differentiable-manifolds.html">
    Variedades diferenciaveis
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="differentiable-manifolds-nb.html">
+   Variedades diferenciaveis_
   </a>
  </li>
  <li class="toctree-l1 current active">
@@ -187,11 +192,11 @@
         aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
     <div class="dropdown-buttons sourcebuttons">
         <a class="repository-button"
-            href="https://github.com/executablebooks/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
+            href="https://onimaru.github.io/differential-geometry-problems/intro.html"><button type="button" class="btn btn-secondary topbarbtn"
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fmetric-tensor-fields.html&body=Your%20issue%20content%20here."><button
+            href="https://onimaru.github.io/differential-geometry-problems/intro.html/issues/new?title=Issue%20on%20page%20%2Fmetric-tensor-fields.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
         
@@ -226,29 +231,37 @@
 <div class="math notranslate nohighlight">
 \[g = dx^{1} \otimes dx^{1} + dx^{2} \otimes dx^{2}\]</div>
 <p>para o espaço Euclidiano bi-dimensional <span class="math notranslate nohighlight">\(\mathbb{E}^{2}\)</span> e a 2-forma diferencial <span class="math notranslate nohighlight">\(dx^{1} \wedge dx^{2}\)</span>. (i) Expresse o tensor métrico e a 2-forma diferencial em coordenadas polares: <span class="math notranslate nohighlight">\(x^{1}(r,\theta) = r \cos{\theta},\ x^{2}(r,\theta) = r \sin{\theta}\)</span>. (ii) Por fim expresse a integral <span class="math notranslate nohighlight">\(\int \int f(x^{1},x^{2})dx^{1}dx^{2}\)</span> em coordenadas polares.</p>
-<p><strong>Solução</strong>: (i) Para calcular os componentes do tensor métrico precisamos primeiro calcular os diferenciais.</p>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+<strong>Solução</strong>:<div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text">(i) Para calcular os componentes do tensor métrico precisamos primeiro calcular os diferenciais.</p>
 <div class="math notranslate nohighlight">
 \[dx^{1} = \frac{\partial x^{1}}{\partial r}dr + \frac{\partial x^{1}}{\partial \theta}d\theta, \text{ e } dx^{2} = \frac{\partial x^{2}}{\partial r}dr + \frac{\partial x^{2}}{\partial \theta}d\theta.\]</div>
 <div class="math notranslate nohighlight">
 \[dx^{1} = \cos{\theta} dr - r \sin{\theta} d \theta, \text{ e } dx^{2} = \sin{\theta} dr + r \cos{\theta} d \theta.\]</div>
-<p>Agora calculamos os produtos tensoriais descritos no tensor métrico:</p>
+<p class="card-text">Agora calculamos os produtos tensoriais descritos no tensor métrico:</p>
 <div class="math notranslate nohighlight">
 \[dx^{1} \otimes dx^{1} = \cos^{2}{\theta} dr \otimes dr -r \cos{\theta} \sin{\theta} dr \otimes d\theta -r \cos{\theta} \sin{\theta} d\theta \otimes dr + r^{2} \sin^{2}{\theta} d\theta \otimes d\theta\]</div>
 <div class="math notranslate nohighlight">
 \[dx^{2} \otimes dx^{2} = \sin^{2}{\theta} dr \otimes dr +r \cos{\theta} \sin{\theta} dr \otimes d\theta +r \cos{\theta} \sin{\theta} d\theta \otimes dr + r^{2} \cos^{2}{\theta} d\theta \otimes d\theta\]</div>
-<p>Assim, temos <span class="math notranslate nohighlight">\(g = dr \otimes dr + r^{2} d \theta \otimes d \theta\)</span> ou na forma matricial, <span class="math notranslate nohighlight">\(g_{ij} = \begin{pmatrix}
+<p class="card-text">Assim, temos <span class="math notranslate nohighlight">\(g = dr \otimes dr + r^{2} d \theta \otimes d \theta\)</span> ou na forma matricial, <span class="math notranslate nohighlight">\(g_{ij} = \begin{pmatrix}
 1 &amp; 0\\ 
 0 &amp; r^{2}
 \end{pmatrix}.\)</span>
 Para calcular a 2-forma devemos lembrar da antissimetria, <span class="math notranslate nohighlight">\(dx^{1} \wedge dx^{2} = - dx^{2} \wedge dx^{1}\)</span> e <span class="math notranslate nohighlight">\(dx^{1} \wedge dx^{1} = dx^{2} \wedge dx^{2} = 0\)</span>. Essas propriedades são preservadas com a mudanças de coordenadas. Então,</p>
 <div class="math notranslate nohighlight">
 \[dx^{1} \wedge dx^{2} = r \cos^{2}{\theta}dr \wedge d \theta - r \sin^{2}{\theta} d \theta \wedge dr = r dr \wedge d \theta,\]</div>
-<p>onde usamos o <span class="math notranslate nohighlight">\(\cos^{2}{\theta} + \sin^{2}{\theta}=1\)</span> e <span class="math notranslate nohighlight">\(dr \wedge d \theta = - d \theta \wedge dr.\)</span><br />
-(ii) Seja qual for a função <span class="math notranslate nohighlight">\(f(x^{1},x^{2})\)</span> reexpressamos ela com as variáveis <span class="math notranslate nohighlight">\(r\)</span> e <span class="math notranslate nohighlight">\(\theta\)</span> e os termos <span class="math notranslate nohighlight">\(dx^{1}dx^{2}\)</span> representam a 2-forma <span class="math notranslate nohighlight">\(dx^{1} \wedge dx^{2}\)</span>. Portanto a integral pode ser expressa em coordenadas polares da seguinte forma:</p>
+<p class="card-text">onde usamos o <span class="math notranslate nohighlight">\(\cos^{2}{\theta} + \sin^{2}{\theta}=1\)</span> e <span class="math notranslate nohighlight">\(dr \wedge d \theta = - d \theta \wedge dr.\)</span></p>
+<p class="card-text">(ii) Seja qual for a função <span class="math notranslate nohighlight">\(f(x^{1},x^{2})\)</span> reexpressamos ela com as variáveis <span class="math notranslate nohighlight">\(r\)</span> e <span class="math notranslate nohighlight">\(\theta\)</span> e os termos <span class="math notranslate nohighlight">\(dx^{1}dx^{2}\)</span> representam a 2-forma <span class="math notranslate nohighlight">\(dx^{1} \wedge dx^{2}\)</span>. Portanto a integral pode ser expressa em coordenadas polares da seguinte forma:</p>
 <div class="math notranslate nohighlight">
 \[\int \int f(x^{1}(r,\theta),x^{2}(r,\theta)) r dr \wedge d \theta.\]</div>
-<p>Para o caso de uma integral definida devemos também redefinir os limites de integração em coordenadas polares.</p>
-<br/>
+<p class="card-text">Para o caso de uma integral definida devemos também redefinir os limites de integração em coordenadas polares.</p>
+</div>
+</details><br/>
 <p>2 - Considere o tensor métrico</p>
 <div class="math notranslate nohighlight">
 \[g = dx^{0} \otimes dx^{0} - dx^{1} \otimes dx^{1}.\]</div>
@@ -265,8 +278,15 @@ Para calcular a 2-forma devemos lembrar da antissimetria, <span class="math notr
  x^{1}
 \end{pmatrix},\end{split}\]</div>
 <p>onde <span class="math notranslate nohighlight">\(\theta \in \mathbb{R}\)</span>.</p>
-<p><strong>Solução</strong>:</p>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+<strong>Solução</strong>:<div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
 </div>
+</details></div>
 
     <script type="text/x-thebe-config">
     {
@@ -293,7 +313,7 @@ Para calcular a 2-forma devemos lembrar da antissimetria, <span class="math notr
         
         <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="differentiable-manifolds.html" title="previous page">Variedades diferenciaveis</a>
+    <a class='left-prev' id="prev-link" href="differentiable-manifolds-nb.html" title="previous page">Variedades diferenciaveis_</a>
     <a class='right-next' id="next-link" href="definitions.html" title="next page">Definições</a>
 
         </div>

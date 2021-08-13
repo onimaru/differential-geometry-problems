@@ -6,7 +6,8 @@ $$g = dx^{1} \otimes dx^{1} + dx^{2} \otimes dx^{2}$$
 
 para o espaço Euclidiano bi-dimensional $\mathbb{E}^{2}$ e a 2-forma diferencial $dx^{1} \wedge dx^{2}$. (i) Expresse o tensor métrico e a 2-forma diferencial em coordenadas polares: $x^{1}(r,\theta) = r \cos{\theta},\ x^{2}(r,\theta) = r \sin{\theta}$. (ii) Por fim expresse a integral $\int \int f(x^{1},x^{2})dx^{1}dx^{2}$ em coordenadas polares.  
 
-**Solução**: (i) Para calcular os componentes do tensor métrico precisamos primeiro calcular os diferenciais.
+```{dropdown} **Solução**: 
+(i) Para calcular os componentes do tensor métrico precisamos primeiro calcular os diferenciais.
 
 $$dx^{1} = \frac{\partial x^{1}}{\partial r}dr + \frac{\partial x^{1}}{\partial \theta}d\theta, \text{ e } dx^{2} = \frac{\partial x^{2}}{\partial r}dr + \frac{\partial x^{2}}{\partial \theta}d\theta.$$
 $$dx^{1} = \cos{\theta} dr - r \sin{\theta} d \theta, \text{ e } dx^{2} = \sin{\theta} dr + r \cos{\theta} d \theta.$$
@@ -24,13 +25,14 @@ Para calcular a 2-forma devemos lembrar da antissimetria, $dx^{1} \wedge dx^{2} 
 
 $$dx^{1} \wedge dx^{2} = r \cos^{2}{\theta}dr \wedge d \theta - r \sin^{2}{\theta} d \theta \wedge dr = r dr \wedge d \theta,$$
 
-onde usamos o $\cos^{2}{\theta} + \sin^{2}{\theta}=1$ e $dr \wedge d \theta = - d \theta \wedge dr.$  
+onde usamos o $\cos^{2}{\theta} + \sin^{2}{\theta}=1$ e $dr \wedge d \theta = - d \theta \wedge dr.$
+
 (ii) Seja qual for a função $f(x^{1},x^{2})$ reexpressamos ela com as variáveis $r$ e $\theta$ e os termos $dx^{1}dx^{2}$ representam a 2-forma $dx^{1} \wedge dx^{2}$. Portanto a integral pode ser expressa em coordenadas polares da seguinte forma:
 
 $$\int \int f(x^{1}(r,\theta),x^{2}(r,\theta)) r dr \wedge d \theta.$$
 
 Para o caso de uma integral definida devemos também redefinir os limites de integração em coordenadas polares.
-
+```
 <br/>
 
 2 - Considere o tensor métrico 
@@ -52,4 +54,6 @@ $$\begin{pmatrix}
 
 onde $\theta \in \mathbb{R}$.  
 
-**Solução**:
+```{dropdown} **Solução**: 
+
+```

@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Variedades diferenciaveis &#8212; Problemas em Geometria Diferencial</title>
+    <title>&lt;no title&gt; &#8212; Problemas em Geometria Diferencial</title>
     
   <link href="_static/css/theme.css" rel="stylesheet" />
   <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -43,7 +43,7 @@
     <script src="_static/copybutton.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
-    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
     <script >
@@ -54,8 +54,6 @@
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Variedades diferenciaveis_" href="differentiable-manifolds-nb.html" />
-    <link rel="prev" title="Mapas" href="maps.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -97,14 +95,14 @@
   1. Mapas, Variedades e Tensores
  </span>
 </p>
-<ul class="current nav bd-sidenav">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="maps.html">
    Mapas
   </a>
  </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
+ <li class="toctree-l1">
+  <a class="reference internal" href="differentiable-manifolds.html">
    Variedades diferenciaveis
   </a>
  </li>
@@ -176,7 +174,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="_sources/differentiable-manifolds.md"><button type="button"
+        <a class="dropdown-buttons" href="_sources/bibliography.md"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
@@ -196,7 +194,7 @@
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://onimaru.github.io/differential-geometry-problems/intro.html/issues/new?title=Issue%20on%20page%20%2Fdifferentiable-manifolds.html&body=Your%20issue%20content%20here."><button
+            href="https://onimaru.github.io/differential-geometry-problems/intro.html/issues/new?title=Issue%20on%20page%20%2Fbibliography.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
         
@@ -217,6 +215,14 @@
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show">
             
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="simple visible nav section-nav flex-column">
+</ul>
+
+            </nav>
         </div>
     </div>
 </div>
@@ -225,16 +231,7 @@
         
               <div>
                 
-  <div class="section" id="variedades-diferenciaveis">
-<h1>Variedades diferenciaveis<a class="headerlink" href="#variedades-diferenciaveis" title="Permalink to this headline">¶</a></h1>
-<!-- Fonte: gadea2012analysis. -->
-<p>1 - Prove que a função <span class="math notranslate nohighlight">\(\phi : \mathbb{R} \rightarrow \mathbb{R}\)</span>, <span class="math notranslate nohighlight">\(\phi(s) = s^{3}\)</span>, define uma estrutura <span class="math notranslate nohighlight">\(C^{\infty}\)</span> sobre <span class="math notranslate nohighlight">\(\mathbb{R}\)</span> diferente da usual (aquela do atlas <span class="math notranslate nohighlight">\(\lbrace (\mathbb{R}, id_{\mathbb{R}}) \rbrace\)</span>).</p>
-<p><strong>Solução</strong>:</p>
-<br/>
-<p>2 - Prove que se <span class="math notranslate nohighlight">\(h: \mathbb{R}^{n} \rightarrow \mathbb{R}^{n}\)</span> é um homemomorfismo, então o atlas <span class="math notranslate nohighlight">\(\lbrace (\mathbb{R}^{n}, h) \rbrace\)</span> define a estrutura diferencial usual sobre <span class="math notranslate nohighlight">\(\mathbb{R}^{n}\)</span> ((aquela definida pelo atlas <span class="math notranslate nohighlight">\(\lbrace (\mathbb{R}^{n}, id_{\mathbb{R}^{n}}) \rbrace\)</span>) se e somente se <span class="math notranslate nohighlight">\(h\)</span> e <span class="math notranslate nohighlight">\(h^{-1}\)</span> são diferenciaveis.</p>
-<p><strong>Solução</strong>:</p>
-</div>
-
+  <span class="target" id="id1"></span>
     <script type="text/x-thebe-config">
     {
         requestKernel: true,
@@ -260,8 +257,6 @@
         
         <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="maps.html" title="previous page">Mapas</a>
-    <a class='right-next' id="next-link" href="differentiable-manifolds-nb.html" title="next page">Variedades diferenciaveis_</a>
 
         </div>
         

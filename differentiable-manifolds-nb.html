@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Variedades diferenciaveis &#8212; Problemas em Geometria Diferencial</title>
+    <title>Variedades diferenciaveis_ &#8212; Problemas em Geometria Diferencial</title>
     
   <link href="_static/css/theme.css" rel="stylesheet" />
   <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -54,8 +54,8 @@
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Variedades diferenciaveis_" href="differentiable-manifolds-nb.html" />
-    <link rel="prev" title="Mapas" href="maps.html" />
+    <link rel="next" title="Campos Tensoriais Métricos" href="metric-tensor-fields.html" />
+    <link rel="prev" title="Variedades diferenciaveis" href="differentiable-manifolds.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -103,13 +103,13 @@
    Mapas
   </a>
  </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
+ <li class="toctree-l1">
+  <a class="reference internal" href="differentiable-manifolds.html">
    Variedades diferenciaveis
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="differentiable-manifolds-nb.html">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
    Variedades diferenciaveis_
   </a>
  </li>
@@ -176,9 +176,9 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="_sources/differentiable-manifolds.md"><button type="button"
+        <a class="dropdown-buttons" href="_sources/differentiable-manifolds-nb.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.md</button></a>
+                data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
         <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
             onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
@@ -196,7 +196,7 @@
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://onimaru.github.io/differential-geometry-problems/intro.html/issues/new?title=Issue%20on%20page%20%2Fdifferentiable-manifolds.html&body=Your%20issue%20content%20here."><button
+            href="https://onimaru.github.io/differential-geometry-problems/intro.html/issues/new?title=Issue%20on%20page%20%2Fdifferentiable-manifolds-nb.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
         
@@ -226,10 +226,28 @@
               <div>
                 
   <div class="section" id="variedades-diferenciaveis">
-<h1>Variedades diferenciaveis<a class="headerlink" href="#variedades-diferenciaveis" title="Permalink to this headline">¶</a></h1>
+<h1>Variedades diferenciaveis_<a class="headerlink" href="#variedades-diferenciaveis" title="Permalink to this headline">¶</a></h1>
 <!-- Fonte: gadea2012analysis. -->
 <p>1 - Prove que a função <span class="math notranslate nohighlight">\(\phi : \mathbb{R} \rightarrow \mathbb{R}\)</span>, <span class="math notranslate nohighlight">\(\phi(s) = s^{3}\)</span>, define uma estrutura <span class="math notranslate nohighlight">\(C^{\infty}\)</span> sobre <span class="math notranslate nohighlight">\(\mathbb{R}\)</span> diferente da usual (aquela do atlas <span class="math notranslate nohighlight">\(\lbrace (\mathbb{R}, id_{\mathbb{R}}) \rbrace\)</span>).</p>
 <p><strong>Solução</strong>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span> 
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span> 
+
+<span class="n">s</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">100</span><span class="p">)</span>
+<span class="n">phi</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">s</span><span class="p">:</span> <span class="n">s</span><span class="o">**</span><span class="mi">3</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">phi</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">s</span><span class="p">,</span><span class="n">y</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/differentiable-manifolds-nb_1_0.png" src="_images/differentiable-manifolds-nb_1_0.png" />
+</div>
+</div>
 <br/>
 <p>2 - Prove que se <span class="math notranslate nohighlight">\(h: \mathbb{R}^{n} \rightarrow \mathbb{R}^{n}\)</span> é um homemomorfismo, então o atlas <span class="math notranslate nohighlight">\(\lbrace (\mathbb{R}^{n}, h) \rbrace\)</span> define a estrutura diferencial usual sobre <span class="math notranslate nohighlight">\(\mathbb{R}^{n}\)</span> ((aquela definida pelo atlas <span class="math notranslate nohighlight">\(\lbrace (\mathbb{R}^{n}, id_{\mathbb{R}^{n}}) \rbrace\)</span>) se e somente se <span class="math notranslate nohighlight">\(h\)</span> e <span class="math notranslate nohighlight">\(h^{-1}\)</span> são diferenciaveis.</p>
 <p><strong>Solução</strong>:</p>
@@ -260,8 +278,8 @@
         
         <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="maps.html" title="previous page">Mapas</a>
-    <a class='right-next' id="next-link" href="differentiable-manifolds-nb.html" title="next page">Variedades diferenciaveis_</a>
+    <a class='left-prev' id="prev-link" href="differentiable-manifolds.html" title="previous page">Variedades diferenciaveis</a>
+    <a class='right-next' id="next-link" href="metric-tensor-fields.html" title="next page">Campos Tensoriais Métricos</a>
 
         </div>
         
