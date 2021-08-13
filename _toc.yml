@@ -1,5 +1,4 @@
 # Table of contents
-# Learn more at https://jupyterbook.org/customize/toc.html
 
 format: jb-book
 root: intro
@@ -7,7 +6,7 @@ parts:
   - caption: 1. Mapas, Variedades e Tensores
     chapters:
     - file: maps
-    - file: differentiable-manifolds
+    - file: differentiable-manifolds-nb
     - file: metric-tensor-fields
   - caption: Apêndices
     chapters:
