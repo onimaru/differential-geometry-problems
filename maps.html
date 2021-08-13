@@ -54,7 +54,7 @@
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Funções e mapeamentos diferenciaveis" href="differentiable-functions-and-mappings.html" />
+    <link rel="next" title="Variedades diferenciaveis" href="differentiable-manifolds.html" />
     <link rel="prev" title="Problemas e soluções em Geometria diferencial" href="intro.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -99,13 +99,13 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="differentiable-functions-and-mappings.html">
-   Funções e mapeamentos diferenciaveis
+  <a class="reference internal" href="differentiable-manifolds.html">
+   Variedades diferenciaveis
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="differentiable-manifolds.html">
-   Variedades diferenciaveis
+  <a class="reference internal" href="metric-tensor-fields.html">
+   Campos Tensoriais Métricos
   </a>
  </li>
  <li class="toctree-l1">
@@ -232,7 +232,21 @@
 <p>4 -  Seja <span class="math notranslate nohighlight">\(f: \mathbb{R} \rightarrow \mathbb{R}\)</span> definido por <span class="math notranslate nohighlight">\(f: x \mapsto x^{2}\)</span> e <span class="math notranslate nohighlight">\(g: \mathbb{R} \rightarrow \mathbb{R}\)</span> por <span class="math notranslate nohighlight">\(g: x \mapsto e^{x}\)</span>. Quais são os mapas <span class="math notranslate nohighlight">\(g \circ f:\mathbb{R} \rightarrow \mathbb{R}\)</span> e <span class="math notranslate nohighlight">\(f \circ g:\mathbb{R} \rightarrow \mathbb{R}\)</span>?<br />
 <strong>Solução</strong>: <span class="math notranslate nohighlight">\(g \circ f = e^{f(x)} = e^{x^{2}}\)</span>, enquanto <span class="math notranslate nohighlight">\(f \circ g = \left(g(x) \right)^{2} = \left(e^{x}\right)^{2} = e^{2x}\)</span>.</p>
 <br/>
-<p>5 - O grupo Euclidiano n-dimensional <span class="math notranslate nohighlight">\(E^{n}\)</span> é feito de uma translação n-dimensional <span class="math notranslate nohighlight">\(a: x \rightarrow x + a\)</span>, onde <span class="math notranslate nohighlight">\(x,a \in \mathbb{R}^{n}\)</span>, e uma rotation, <span class="math notranslate nohighlight">\(O(n)\)</span>, <span class="math notranslate nohighlight">\(R: x \rightarrow Rx\)</span>, onde <span class="math notranslate nohighlight">\(R \in O(n)\)</span>. Um elemento geral <span class="math notranslate nohighlight">\((R,a)\)</span> de <span class="math notranslate nohighlight">\(E^{n}\)</span> atua sobre <span class="math notranslate nohighlight">\(x\)</span> pelo mapa <span class="math notranslate nohighlight">\((R,a): x \mapsto Rx + a\)</span>. O produto é definido por <span class="math notranslate nohighlight">\((R_{2},a_{2}) \times (R_{1},a_{1}): x \mapsto R_{2}\left( R_{1}x + a_{1}\right) + a_{2}\)</span>, que é <span class="math notranslate nohighlight">\((R_{2},a_{2}) \circ (R_{1},a_{1}) = \left( R_{2}R_{1}, R_{2}a_{1} + a_{2} \right)\)</span>. Mostre que os mapas <span class="math notranslate nohighlight">\(a, R\)</span> e <span class="math notranslate nohighlight">\((R,a)\)</span> são bijeções e encontre seus mapas inversos.</p>
+<p>5 - O grupo Euclidiano n-dimensional <span class="math notranslate nohighlight">\(E^{n}\)</span> é feito de uma translação n-dimensional <span class="math notranslate nohighlight">\(a: x \rightarrow x + a\)</span>, onde <span class="math notranslate nohighlight">\(x,a \in \mathbb{R}^{n}\)</span>, e uma rotation, <span class="math notranslate nohighlight">\(O(n)\)</span>, <span class="math notranslate nohighlight">\(R: x \rightarrow Rx\)</span>, onde <span class="math notranslate nohighlight">\(R \in O(n)\)</span>. Um elemento geral <span class="math notranslate nohighlight">\((R,a)\)</span> de <span class="math notranslate nohighlight">\(E^{n}\)</span> atua sobre <span class="math notranslate nohighlight">\(x\)</span> pelo mapa <span class="math notranslate nohighlight">\((R,a): x \mapsto Rx + a\)</span>. O produto é definido por <span class="math notranslate nohighlight">\((R_{2},a_{2}) \times (R_{1},a_{1}): x \mapsto R_{2}\left( R_{1}x + a_{1}\right) + a_{2}\)</span>, que é <span class="math notranslate nohighlight">\((R_{2},a_{2}) \circ (R_{1},a_{1}) = \left( R_{2}R_{1}, R_{2}a_{1} + a_{2} \right)\)</span>. Mostre que os mapas <span class="math notranslate nohighlight">\(a, R\)</span> e <span class="math notranslate nohighlight">\((R,a)\)</span> são bijeções e encontre seus mapas inversos.<br />
+<strong>Solução</strong>: o mapa <span class="math notranslate nohighlight">\(a: x \rightarrow x + a\)</span> é a apenas a identidade de <span class="math notranslate nohighlight">\(\mathbb{R}^{n}\)</span> deslocada de <span class="math notranslate nohighlight">\(a\)</span>. É portanto bijetiva e seu mapa inverso é <span class="math notranslate nohighlight">\(a^{-1}: x \rightarrow x-a\)</span>.<br />
+O mapa <span class="math notranslate nohighlight">\(R: x \rightarrow Rx\)</span> é injetivo, pois para há apenas um <span class="math notranslate nohighlight">\(x\)</span> que é mapeado para <span class="math notranslate nohighlight">\(Rx\)</span>. É também sobrejetivo, pois todos os pontos do <span class="math notranslate nohighlight">\(\mathbb{R}^{n}\)</span> podem ser obtidos através da transformação, por consequência é bijetivo. O mapa inverso é dado por <span class="math notranslate nohighlight">\(R^{-1}:x \rightarrow R^{-1}x\)</span>, onde <span class="math notranslate nohighlight">\(R^{-1}\)</span> é a matriz inversa de <span class="math notranslate nohighlight">\(R\)</span>.<br />
+O mapa <span class="math notranslate nohighlight">\((R,a): x \mapsto Rx + a\)</span> é simplesmente a atuação conjunta dos mapas <span class="math notranslate nohighlight">\(R\)</span> e <span class="math notranslate nohighlight">\(a\)</span> sobre <span class="math notranslate nohighlight">\(x\)</span>. Essa atuação conserva as propriedades de ambos mapas, sendo assim uma bijeção. Seu mapa inverso é dado por <span class="math notranslate nohighlight">\((R,a)^{-1}: x \rightarrow R^{-1}x - a\)</span>.</p>
+<br/>
+<p>6 - Seja o mapa <span class="math notranslate nohighlight">\(f: \mathbb{R} \rightarrow \mathbb{R}_{\ge 0}\)</span> definido por <span class="math notranslate nohighlight">\(f: x \rightarrow x^{2}\)</span>. Mostre que se dotarmos <span class="math notranslate nohighlight">\(\mathbb{R}\)</span> com a propriedade da soma, ou seja <span class="math notranslate nohighlight">\(ab = a + b\ \forall a,b \in \mathbb{R}\)</span>, o mapa <span class="math notranslate nohighlight">\(f\)</span> não é um homomorfismo. Mostre também que se ao invés da soma dotarmos <span class="math notranslate nohighlight">\(\mathbb{R}\)</span> com a propriedade da multiplicação, o mapa <span class="math notranslate nohighlight">\(f\)</span> é então um homomorfismo.<br />
+<strong>Solução</strong>: Para o primeiro caso devemos verificar se a propriedade da soma <span class="math notranslate nohighlight">\(ab = a+b\)</span> é mantida pelo mapa, ou seja <span class="math notranslate nohighlight">\(f(ab) = f(a) + f(b)\)</span>. Podemos ver que não é um homomorfismo, pois aplicando o mapa <span class="math notranslate nohighlight">\(f\)</span> na soma <span class="math notranslate nohighlight">\(a+b\)</span> temos <span class="math notranslate nohighlight">\(f(a+b) = (a+b)^{2} \ne a^{2} + b^{2} = f(a) + f(b)\)</span> a propriedade da soma não é preservada.<br />
+Já para o caso da multiplicação <span class="math notranslate nohighlight">\(ab = a \cdot b\)</span>, temos <span class="math notranslate nohighlight">\(f(a \cdot b) = (a \cdot b)^{2} = a^{2} \cdot b^{2} = f(a)\cdot f(b)\)</span>, preservando a multiplicação e sendo assim um homomorfismo. Entretanto <span class="math notranslate nohighlight">\(f\)</span> não é um isomorfismo, já que não é bijetivo.</p>
+<br/>
+<hr class="docutils" />
+<p>Fonte: gadea2012analysis.</p>
+<p>1 - Considere o mapa: <span class="math notranslate nohighlight">\(f: \mathbb{R}^{2} \rightarrow \mathbb{R},\ \ \ (x,y) \Rightarrow x^{3} + xy + y^{3} + 1\)</span><br />
+(i) Calcule o mapa <span class="math notranslate nohighlight">\(f_{*}: T_{p}\mathbb{R}^{2} \rightarrow T_{p(p)}\mathbb{R}\)</span>.<br />
+(ii) Para quais dos pontos <span class="math notranslate nohighlight">\((0,0),\ (1/3,1/3),\ (-1/3,-1/3)\)</span>, é <span class="math notranslate nohighlight">\(f_{*}\)</span> é injetiva or sobrejetiva?</p>
+<hr class="docutils" />
 </div>
 
     <script type="text/x-thebe-config">
@@ -261,7 +275,7 @@
         <div class='prev-next-bottom'>
             
     <a class='left-prev' id="prev-link" href="intro.html" title="previous page">Problemas e soluções em Geometria diferencial</a>
-    <a class='right-next' id="next-link" href="differentiable-functions-and-mappings.html" title="next page">Funções e mapeamentos diferenciaveis</a>
+    <a class='right-next' id="next-link" href="differentiable-manifolds.html" title="next page">Variedades diferenciaveis</a>
 
         </div>
         

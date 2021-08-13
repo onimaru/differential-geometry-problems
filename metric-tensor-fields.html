@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Problemas e soluções em Geometria diferencial &#8212; Problemas em Geometria Diferencial</title>
+    <title>Campos Tensoriais Métricos &#8212; Problemas em Geometria Diferencial</title>
     
   <link href="_static/css/theme.css" rel="stylesheet" />
   <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -54,7 +54,8 @@
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Mapas" href="maps.html" />
+    <link rel="next" title="Definições" href="definitions.html" />
+    <link rel="prev" title="Variedades diferenciaveis" href="differentiable-manifolds.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -85,13 +86,13 @@
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
     <div class="bd-toc-item active">
         <ul class="nav bd-sidenav">
- <li class="toctree-l1 current">
-  <a class="reference internal" href="#">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
    Problemas e soluções em Geometria diferencial
   </a>
  </li>
 </ul>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="maps.html">
    Mapas
@@ -102,8 +103,8 @@
    Variedades diferenciaveis
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="metric-tensor-fields.html">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
    Campos Tensoriais Métricos
   </a>
  </li>
@@ -158,7 +159,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="_sources/intro.md"><button type="button"
+        <a class="dropdown-buttons" href="_sources/metric-tensor-fields.md"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
@@ -178,7 +179,7 @@
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fintro.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fmetric-tensor-fields.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
         
@@ -207,12 +208,43 @@
         
               <div>
                 
-  <div class="section" id="problemas-e-solucoes-em-geometria-diferencial">
-<h1>Problemas e soluções em Geometria diferencial<a class="headerlink" href="#problemas-e-solucoes-em-geometria-diferencial" title="Permalink to this headline">¶</a></h1>
-<p>Este material não é feito em inglês devido a falta de conteúdo deste tipo em português.</p>
-<p>Se você deseja contribuir com problemas/soluções bem como ajudar a apontar erros fique à vontade para abrir um PR.</p>
-<div class="toctree-wrapper compound">
-</div>
+  <div class="section" id="campos-tensoriais-metricos">
+<h1>Campos Tensoriais Métricos<a class="headerlink" href="#campos-tensoriais-metricos" title="Permalink to this headline">¶</a></h1>
+<p>1 - Considere o tensor métrico
+$<span class="math notranslate nohighlight">\(g = dx^{1} \otimes dx^{1} + dx^{2} \otimes dx^{2}\)</span><span class="math notranslate nohighlight">\(
+para o espaço Euclidiano bi-dimensional \)</span>\mathbb{E}^{2}<span class="math notranslate nohighlight">\( e a 2-forma diferencial \)</span>dx^{1} \wedge dx^{2}<span class="math notranslate nohighlight">\(. (i) Expresse o tensor métrico e a 2-forma diferencial em coordenadas polares: \)</span>x^{1}(r,\theta) = r \cos{\theta},\ x^{2}(r,\theta) = r \sin{\theta}<span class="math notranslate nohighlight">\(. (ii) Por fim expresse a integral \)</span>\int \int f(x^{1},x^{2})dx^{1}dx^{2}<span class="math notranslate nohighlight">\( em coordenadas polares.  
+**Solução**: (i) Para calcular os componentes do tensor métrico precisamos primeiro calcular os diferenciais.
+\)</span><span class="math notranslate nohighlight">\(dx^{1} = \frac{\partial x^{1}}{\partial r}dr + \frac{\partial x^{1}}{\partial \theta}d\theta, \text{ e } dx^{2} = \frac{\partial x^{2}}{\partial r}dr + \frac{\partial x^{2}}{\partial \theta}d\theta.\)</span><span class="math notranslate nohighlight">\(
+\)</span><span class="math notranslate nohighlight">\(dx^{1} = \cos{\theta} dr - r \sin{\theta} d \theta, \text{ e } dx^{2} = \sin{\theta} dr + r \cos{\theta} d \theta.\)</span><span class="math notranslate nohighlight">\(
+Agora calculamos os produtos tensoriais descritos no tensor métrico:
+\)</span><span class="math notranslate nohighlight">\(dx^{1} \otimes dx^{1} = \cos^{2}{\theta} dr \otimes dr -r \cos{\theta} \sin{\theta} dr \otimes d\theta -r \cos{\theta} \sin{\theta} d\theta \otimes dr + r^{2} \sin^{2}{\theta} d\theta \otimes d\theta\)</span><span class="math notranslate nohighlight">\(
+\)</span><span class="math notranslate nohighlight">\(dx^{2} \otimes dx^{2} = \sin^{2}{\theta} dr \otimes dr +r \cos{\theta} \sin{\theta} dr \otimes d\theta +r \cos{\theta} \sin{\theta} d\theta \otimes dr + r^{2} \cos^{2}{\theta} d\theta \otimes d\theta\)</span><span class="math notranslate nohighlight">\(
+Assim, temos \)</span>g = dr \otimes dr + r^{2} d \theta \otimes d \theta<span class="math notranslate nohighlight">\( ou na forma matricial, \)</span>g_{ij} = \begin{pmatrix}
+1 &amp; 0\
+0 &amp; r^{2}
+\end{pmatrix}.<span class="math notranslate nohighlight">\(
+Para calcular a 2-forma devemos lembrar da antissimetria, \)</span>dx^{1} \wedge dx^{2} = - dx^{2} \wedge dx^{1}<span class="math notranslate nohighlight">\( e \)</span>dx^{1} \wedge dx^{1} = dx^{2} \wedge dx^{2} = 0<span class="math notranslate nohighlight">\(. Essas propriedades são preservadas com a mudanças de coordenadas. Então,
+\)</span><span class="math notranslate nohighlight">\(dx^{1} \wedge dx^{2} = r \cos^{2}{\theta}dr \wedge d \theta - r \sin^{2}{\theta} d \theta \wedge dr = r dr \wedge d \theta,\)</span><span class="math notranslate nohighlight">\(
+onde usamos o \)</span>\cos^{2}{\theta} + \sin^{2}{\theta}=1<span class="math notranslate nohighlight">\( e \)</span>dr \wedge d \theta = - d \theta \wedge dr.<span class="math notranslate nohighlight">\(  
+(ii) Seja qual for a função \)</span>f(x^{1},x^{2})<span class="math notranslate nohighlight">\( reexpressamos ela com as variáveis \)</span>r<span class="math notranslate nohighlight">\( e \)</span>\theta<span class="math notranslate nohighlight">\( e os termos \)</span>dx^{1}dx^{2}<span class="math notranslate nohighlight">\( representam a 2-forma \)</span>dx^{1} \wedge dx^{2}<span class="math notranslate nohighlight">\(. Portanto a integral pode ser expressa em coordenadas polares da seguinte forma:
+\)</span><span class="math notranslate nohighlight">\(\int \int f(x^{1}(r,\theta),x^{2}(r,\theta)) r dr \wedge d \theta.\)</span>$
+Para o caso de uma integral definida devemos também redefinir os limites de integração em coordenadas polares.</p>
+<br/>
+<p>2 - Considere o tensor métrico
+$<span class="math notranslate nohighlight">\(g = dx^{0} \otimes dx^{0} - dx^{1} \otimes dx^{1}.\)</span><span class="math notranslate nohighlight">\(
+Mostre que \)</span>g<span class="math notranslate nohighlight">\( é invariante sob a transformação
+\)</span><span class="math notranslate nohighlight">\(\begin{pmatrix}
+ x^{0}\\ 
+ x^{1}
+\end{pmatrix} \mapsto \begin{pmatrix}
+\cosh{\theta} &amp; \sinh{\theta}\\ 
+\sinh{\theta} &amp; \cosh{\theta}
+\end{pmatrix}\begin{pmatrix}
+ x^{0}\\ 
+ x^{1}
+\end{pmatrix},\)</span><span class="math notranslate nohighlight">\(
+onde \)</span>\theta \in \mathbb{R}$.<br />
+<strong>Solução</strong>:</p>
 </div>
 
     <script type="text/x-thebe-config">
@@ -240,7 +272,8 @@
         
         <div class='prev-next-bottom'>
             
-    <a class='right-next' id="next-link" href="maps.html" title="next page">Mapas</a>
+    <a class='left-prev' id="prev-link" href="differentiable-manifolds.html" title="previous page">Variedades diferenciaveis</a>
+    <a class='right-next' id="next-link" href="definitions.html" title="next page">Definições</a>
 
         </div>
         
