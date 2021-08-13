@@ -3,9 +3,13 @@
 
 format: jb-book
 root: intro
-chapters:
-- file: maps
-- file: differentiable-manifolds
-- file: metric-tensor-fields
-- file: definitions
-- file: symbol-index
+parts:
+  - caption: 1. Mapas, Variedades e Tensores
+    chapters:
+    - file: maps
+    - file: differentiable-manifolds
+    - file: metric-tensor-fields
+  - caption: Apêndices
+    chapters:
+    - file: definitions
+    - file: symbol-index
