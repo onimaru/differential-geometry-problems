@@ -273,8 +273,6 @@ Para calcular a 2-forma devemos lembrar da antissimetria, <span class="math notr
  x^{1}
 \end{pmatrix},\end{split}\]</div>
 <p>onde <span class="math notranslate nohighlight">\(\theta \in \mathbb{R}\)</span>.</p>
-<p><strong>Solução</strong>:
-Para esse caso podemos escrever o vetor inicial igual à transformação e verificar se a métrica assume o mesmo formato apresentado no enunciado.</p>
 <details class="sphinx-bs dropdown card mb-3">
 <summary class="summary-title card-header">
 <strong>Solução</strong>:<div class="summary-down docutils">
@@ -282,8 +280,94 @@ Para esse caso podemos escrever o vetor inicial igual à transformação e verif
 <div class="summary-up docutils">
 <svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="summary-content card-body docutils">
+<p class="card-text">Para esse caso podemos escrever o vetor inicial igual à transformação e verificar se a métrica assume o mesmo formato apresentado no enunciado. Vamos mudar a notaçõ para evitar confusão:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{pmatrix}
+ x^{0}\\ 
+ x^{1}
+\end{pmatrix} \mapsto \begin{pmatrix}
+\cosh{\theta} &amp; \sinh{\theta}\\ 
+\sinh{\theta} &amp; \cosh{\theta}
+\end{pmatrix}\begin{pmatrix}
+ y^{0}\\ 
+ y^{1}
+\end{pmatrix}.\end{split}\]</div>
+<p class="card-text">Então devemos calcular os diferenciais <span class="math notranslate nohighlight">\(dx^{0}\)</span> e <span class="math notranslate nohighlight">\(dx^{1}\)</span> para calcular o tensor métrico após a transformação.</p>
+<div class="math notranslate nohighlight">
+\[x^{0} = \cosh{\theta}\ y^{0} + \sinh{\theta}\ y^{1}, \text{ e } x^{1} = \sinh{\theta}\ y^{0} + \cosh{\theta}\ y^{1},\]</div>
+<p class="card-text">e</p>
+<div class="math notranslate nohighlight">
+\[dx^{0} = \cosh{\theta}\ dy^{0} + \sinh{\theta}\ dy^{1}, \text{ e } dx^{1} = \sinh{\theta}\ dy^{0} + \cosh{\theta}\ dy^{1}.\]</div>
+<p class="card-text">Lembre que <span class="math notranslate nohighlight">\(\cosh{\theta}\)</span> é constante, por isso o diferencial possui o mesmo formato dos vetores iniciais. Agora fazemos:</p>
+<div class="math notranslate nohighlight">
+\[dx^{0} \otimes dx^{0} = \cosh^{2}{\theta}\ dy^{0}dy^{0} + \sinh^{2}{\theta}\ dy^{1}dy^{1} + \cosh{\theta}\ \sinh{\theta}\ dy^{0}dy^{1} + \sinh{\theta}\ \cosh{\theta}\ dy^{1}dy^{0},\]</div>
+<div class="math notranslate nohighlight">
+\[dx^{1} \otimes dx^{1} = \sinh^{2}{\theta}\ dy^{0}dy^{0} + \cosh^{2}{\theta}\ dy^{1}dy^{1} + \sinh{\theta}\ \cosh{\theta}\ dy^{0}dy^{1} + \cosh{\theta}\ \sinh{\theta}\ dy^{1}dy^{0}.\]</div>
+<p class="card-text">Por fim,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{align*}
+ g &amp;= dx^{0} \otimes dx^{0} - dx^{1} \otimes dx^{1}\\ 
+ &amp;= \left(\cosh^{2}{\theta}\ - \sinh^{2}{\theta}\right) dy^{0}dy^{0} + \left(\sinh^{2}{\theta}\ - \cosh^{2}{\theta}\right) dy^{1}dy^{1} \\
+ &amp;= dy^{0}dy^{0} - dy^{1}dy^{1}
+\end{align*},\end{split}\]</div>
+<p class="card-text">onde usamos <span class="math notranslate nohighlight">\(\cosh^{2}{\theta}\ - \sinh^{2}{\theta} = 1\)</span> (isso pode ser verificado usando as formas exponenciais: <span class="math notranslate nohighlight">\(\cosh{\theta} = \frac{e^{\theta} + e^{-\theta}}{2}\)</span> e <span class="math notranslate nohighlight">\(\sinh{\theta} = \frac{e^{\theta} - e^{-\theta}}{2}\)</span>).</p>
+<p class="card-text">Desta maneira podemos ver que o tensor métrico apresentou o mesmo formato diante dessa tansformação. Devemos ainda citar aqui que esse tensor métrico coincide com o tensor de Minkowski para a relatividade especial (se usarmos apenas uma dimensão para o tempo e outra para o espaço), ou seja,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}g = \begin{pmatrix}
+1 &amp; 0\\ 
+0 &amp; -1
+\end{pmatrix}.\end{split}\]</div>
+<p class="card-text">e por fim, a matriz de transformação usada nesse problema tem a mesma forma da Transformação de Lorentz, onde o parâmetro <span class="math notranslate nohighlight">\(\theta\)</span> é dependente da velocidade relativa entre os referenciais e da velocidade da luz.</p>
 </div>
-</details></div>
+</details><br/>
+<p>3 - Seja a 1-forma diferencial <span class="math notranslate nohighlight">\(\theta = \left( 2 y^{1}y^{2} + (y^{1})^{2} +1 \right)dy^{1} + \left((y^{1})^{2} - y^{2} \right)dy^{2}\)</span> no <span class="math notranslate nohighlight">\(\mathbb{R}^{2}\)</span>. Seja o mapa <span class="math notranslate nohighlight">\(f: \mathbb{R}^{3} \rightarrow \mathbb{R}^{2}\)</span>, definido por <span class="math notranslate nohighlight">\((x^{1},x^{2},x^{3} ) \mapsto (y^{1},y^{2}) = (x^{1}-x^{2}, (x^{2})^{2} + x^{3})\)</span>. Encontre o pullback de <span class="math notranslate nohighlight">\(f\)</span> sobre <span class="math notranslate nohighlight">\(\theta\)</span>, ou seja, <span class="math notranslate nohighlight">\(f^{*} \theta\)</span>.</p>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+<strong>Solução</strong>:<div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text">Inicalmente vamos lembrar como calcular o pullback de uma forma diferencial. Para facilitar a notação vamos definir <span class="math notranslate nohighlight">\(g_{1} = \left( 2 y^{1}y^{2} + (y^{1})^{2} +1 \right)\)</span> e <span class="math notranslate nohighlight">\(g_{2} = \left((y^{1})^{2} - y^{2} \right)\)</span>. Então podemos adequar o problema à fórmula:</p>
+<div class="math notranslate nohighlight">
+\[f^{*} \theta = \frac{\partial (y^{i} \circ f)}{\partial x^{j}}(g_{i} \circ f)dx^{j}\]</div>
+<p class="card-text">Podemos escrever explicitamente na forma matricial:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}f^{*} \theta = \begin{pmatrix} (g_{1} \circ f) &amp; (g_{2} \circ f) \end{pmatrix} \begin{pmatrix}
+\frac{\partial (y^{1} \circ f)}{\partial x^{1}} &amp; \frac{\partial (y^{1} \circ f)}{\partial x^{2}} &amp; \frac{\partial (y^{1} \circ f)}{\partial x^{3}}\\ 
+\frac{\partial (y^{2} \circ f)}{\partial x^{1}} &amp; \frac{\partial (y^{2} \circ f)}{\partial x^{2}} &amp; \frac{\partial (y^{2} \circ f)}{\partial x^{3}}
+\end{pmatrix} \begin{pmatrix} dx^{1} \\ dx^{2} \\ dx^{3} \end{pmatrix}.\end{split}\]</div>
+<p class="card-text">Por exemplo, <span class="math notranslate nohighlight">\(\frac{\partial (y^{1} \circ f)}{\partial x^{1}} = \frac{\partial (x^{1} - x^{2})}{\partial x^{1}} = 1\)</span>. Vamos calcular todos os termos:</p>
+<div class="math notranslate nohighlight">
+\[g_{1} \circ f = 2 (x^{1} - x^{2})((x^{2})^{2} + x^{3}) + (x^{1} - x^{2})^{2} + 1\]</div>
+<div class="math notranslate nohighlight">
+\[g_{2} \circ f = (x^{1} - x^{2})^{2} - (x^{2})^{2} - x^{3}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}\frac{\partial (y^{i} \circ f)}{\partial x^{j}} = \begin{pmatrix}
+1 &amp; -1 &amp; 0\\ 
+0 &amp; 2x^{2}&amp; 1
+\end{pmatrix}\end{split}\]</div>
+<p class="card-text">Agora basta fazer os produtos:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{align*}
+f^{*} \theta &amp;= 
+\left(2 (x^{1} - x^{2})((x^{2})^{2} + x^{3}) + (x^{1} - x^{2})^{2} + 1 \right)dx^{1} \\ &amp;\ \ \ + \left(2x^{2}(x^{1} - x^{2})^{2} - (x^{2})^{2} - x^{3}  -2 (x^{1} - x^{2})((x^{2})^{2} + x^{3}) - (x^{1} - x^{2})^{2} - 1 \right)dx^{2} \\
+&amp;\ \ \ + \left( (x^{1} - x^{2})^{2} - (x^{2})^{2} - x^{3} \right)dx^{3}
+\end{align*}.\end{split}\]</div>
+<p class="card-text">Não nos incomodamos em simplificar os termos, talvez possa ficar um pouco mais curto. Se você entender bem estes passos poderá realizar um cálculo como esse sem usar a multiplicação de matrizes. De todo modo este problema pode ser um guia mais detalhado.</p>
+</div>
+</details><br/>
+<p>4 - Sejam <span class="math notranslate nohighlight">\(a &gt; 0\)</span> e <span class="math notranslate nohighlight">\(b &gt; 0\)</span>. Considere o mapa <span class="math notranslate nohighlight">\(f: \mathbb{R}^{2} \rightarrow \mathbb{R}^{2}\)</span> definido por</p>
+<div class="math notranslate nohighlight">
+\[f^{1}(x^{1},x^{2}) = 1 + x^{2} - a (x^{1})^{2},\ f^{2}(x^{1},x^{2}) = b x^{1}\]</div>
+<p>com as 1-formas diferenciais <span class="math notranslate nohighlight">\(df^{1} = dx^{2} - 2 a x^{1} d x^{1},\ df^{2} = b dx^{1}\)</span>.</p>
+<p>(i) Seja <span class="math notranslate nohighlight">\(\Omega = dx^{1} \wedge dx^{2}\)</span>. Encontre o pullback de <span class="math notranslate nohighlight">\(f\)</span> sobre <span class="math notranslate nohighlight">\(\Omega\)</span>, ou seja, <span class="math notranslate nohighlight">\(f^{*}(\Omega) = f^{*}(dx^{1} \wedge dx^{2})\)</span>.</p>
+<p><strong>Solução</strong>:</p>
+<p>(ii) Seja <span class="math notranslate nohighlight">\(\alpha = x^{1}dx^{2} - x^{2} dx^{1}\)</span>. Encontre <span class="math notranslate nohighlight">\(f^{*}(\alpha)\)</span>.</p>
+<p><strong>Solução</strong>:</p>
+<p>(iii) Considere o tensor métrico de <span class="math notranslate nohighlight">\(\mathbb{E}^{2}\)</span>, <span class="math notranslate nohighlight">\(g = dx^{1} \otimes dx^{1} + dx^{2} \otimes dx^{2}\)</span>. Encontre <span class="math notranslate nohighlight">\(f^{*}(g)\)</span>.</p>
+<p><strong>Solução</strong>:</p>
+</div>
 
     <script type="text/x-thebe-config">
     {
