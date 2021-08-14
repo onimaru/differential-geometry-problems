@@ -1,7 +1,7 @@
 # Table of contents
 
 format: jb-book
-root: intro
+root: README
 parts:
   - caption: 1. Mapas, Variedades e Tensores
     chapters:

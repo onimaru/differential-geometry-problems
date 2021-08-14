@@ -1,4 +1,8 @@
-# Mapas
+(maps-manifolds)=
+# Mapas e Variedades
+
+(maps)=
+## Mapas
 
 1 - Seja $f: \mathbb{R} \rightarrow \mathbb{R}$ dado por $f(x) = \sin{x}$ ou $f: x \Rightarrow \sin{x}$. Determine o domínio, alcance, imagem e imagem inversa de $0$. 
  
@@ -57,9 +61,12 @@ Já para o caso da multiplicação $ab = a \cdot b$, temos $f(a \cdot b) = (a \c
 ```
 <br/>
 
+(manifolds)=
+## Variedades
 <!-- Fonte: gadea2012analysis. -->
 
 7 - Considere o mapa: $f: \mathbb{R}^{2} \rightarrow \mathbb{R},\ \ \ (x,y) \Rightarrow x^{3} + xy + y^{3} + 1$  
    1. Calcule o mapa $f_{*}: T_{p}\mathbb{R}^{2} \rightarrow T_{p(p)}\mathbb{R}$.  
    2. Para quais dos pontos $(0,0),\ (1/3,1/3),\ (-1/3,-1/3)$, é $f_{*}$ é injetiva or sobrejetiva?
+
 
