@@ -151,11 +151,21 @@ com as 1-formas diferenciais $df^{1} = dx^{2} - 2 a x^{1} d x^{1},\ df^{2} = b d
 
 (i) Seja $\Omega = dx^{1} \wedge dx^{2}$. Encontre o pullback de $f$ sobre $\Omega$, ou seja, $f^{*}(\Omega) = f^{*}(dx^{1} \wedge dx^{2})$.
 
-**Solução**:
+```{dropdown} **Solução**:
+Como $f^{*} \Omega = \Omega \circ f$, $f^{*}\Omega = df^{1}(x^{1},x^{2}) \wedge df^{2}(x^{1},x^{2}))$, ou seja, a composta é feita com o próprio operador $d$. Continuando,
+
+$$\begin{align*}
+f^{*}(dx^{1} \wedge dx^{2}) &= \left(d(1 + x^{2} - a(x^{1})^{2})\right) \wedge \left(d(bx^{1})\right) \\
+&= \left(dx^{2} - 2adx^{1}\right) \wedge \left(bdx^{1}\right) \\
+&= -b dx^{1} \wedge dx^{2}.
+\end{align*}$$
+```
 
 (ii) Seja $\alpha = x^{1}dx^{2} - x^{2} dx^{1}$. Encontre $f^{*}(\alpha)$.
 
 **Solução**:
+
+
 
 (iii) Considere o tensor métrico de $\mathbb{E}^{2}$, $g = dx^{1} \otimes dx^{1} + dx^{2} \otimes dx^{2}$. Encontre $f^{*}(g)$.
 
