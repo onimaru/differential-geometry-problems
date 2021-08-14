@@ -1,8 +1,8 @@
 # Problemas e soluções em Geometria diferencial
 
 ```{note}
-Conteúdo em constante evolução.
-Livro: https://onimaru.github.io/differential-geometry-problems
+Conteúdo em constante evolução.  
+Livro: https://onimaru.github.io/differential-geometry-problems  
 Repositório: https://github.com/onimaru/differential-geometry-problems
 ```
 
