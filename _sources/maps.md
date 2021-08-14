@@ -1,5 +1,5 @@
 (maps-manifolds)=
-# Mapas e Variedades
+# Mapas, Curvas, superfícies e Variedades
 
 (maps)=
 ## Mapas
