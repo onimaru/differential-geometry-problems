@@ -1,3 +1,4 @@
+(matric-tensor-fields)=
 # Campos Tensoriais Métricos
 
 1 - Considere o tensor métrico 
@@ -53,6 +54,9 @@ $$\begin{pmatrix}
 \end{pmatrix},$$
 
 onde $\theta \in \mathbb{R}$.  
+
+**Solução**:
+Para esse caso podemos escrever o vetor inicial igual à transformação e verificar se a métrica assume o mesmo formato apresentado no enunciado.
 
 ```{dropdown} **Solução**: 
 
