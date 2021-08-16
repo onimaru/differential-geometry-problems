@@ -212,6 +212,24 @@
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show">
             
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#mapas">
+   Mapas
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#espacos-vetoriais">
+   Espaços Vetoriais
+  </a>
+ </li>
+</ul>
+
+            </nav>
         </div>
     </div>
 </div>
@@ -222,6 +240,8 @@
                 
   <div class="section" id="definicoes">
 <span id="definitions"></span><h1>Definições<a class="headerlink" href="#definicoes" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="mapas">
+<h2>Mapas<a class="headerlink" href="#mapas" title="Permalink to this headline">¶</a></h2>
 <p><strong>Mapa</strong>: um mapa <span class="math notranslate nohighlight">\(\phi\)</span> é uma regra que atribui para cada <span class="math notranslate nohighlight">\(y \in Y\)</span> um <span class="math notranslate nohighlight">\(x \in X\)</span>, denotado por <span class="math notranslate nohighlight">\(\phi: X \rightarrow Y\)</span>.
 O conjunto <span class="math notranslate nohighlight">\(Y\)</span> é chamado de <strong>alcance</strong> (range) do mapa, o conjunto <span class="math notranslate nohighlight">\(X\)</span> é chamado de <strong>domínio</strong> de <span class="math notranslate nohighlight">\(\phi\)</span> e a <strong>imagem</strong> de <span class="math notranslate nohighlight">\(\phi\)</span> é o conjunto <span class="math notranslate nohighlight">\(\phi(x) = \lbrace y \in Y | \phi(x) = y,\ \forall x \in X \rbrace\)</span>.</p>
 <p><strong>Um-a-um</strong> ou <strong>injetivo</strong>: um mapa é chamado de um-a-um (1-1) se para cada <span class="math notranslate nohighlight">\(y \in Y\)</span> existe somente um <span class="math notranslate nohighlight">\(x \in X\)</span> tal que para <span class="math notranslate nohighlight">\(x, x' \in X, x \ne x' \Longrightarrow f(x) \ne f(x')\)</span>.</p>
@@ -241,19 +261,42 @@ chamado de mapa de inclusão, também denotado como <span class="math notranslat
 <p><strong>Mapa n-ário</strong>: é o mapa <span class="math notranslate nohighlight">\(\phi : X^{n} \rightarrow Y\)</span>, deﬁnido como <span class="math notranslate nohighlight">\(\phi : (x_{1}, x_{2}, ..., x_{n}) \rightarrow y\)</span>.</p>
 <p><strong>Mapa de projeção</strong>: é um mapa n-ário <span class="math notranslate nohighlight">\(pr_{i} : X_{1} \times X_{2} \times ... \times X_{n} \rightarrow X_{i}\)</span> , deﬁnido como <span class="math notranslate nohighlight">\(pr_{i} : (x_{1}, ..., x_{n}) \rightarrow x_{i}\)</span>.</p>
 <p><strong>Mapa característico</strong>: dado um subconjunto <span class="math notranslate nohighlight">\(A \subset X\)</span>, um mapa <span class="math notranslate nohighlight">\(\chi_{A} : X \rightarrow {0, 1}\)</span> é dito característico de <span class="math notranslate nohighlight">\(A\)</span>, deﬁnido como <span class="math notranslate nohighlight">\(\chi_{A} (x) = 0\)</span> se <span class="math notranslate nohighlight">\(x \notin A\)</span> e <span class="math notranslate nohighlight">\(\chi_{A} (x) = 1\)</span> se <span class="math notranslate nohighlight">\(x \in A\)</span>.</p>
-<p><strong>Categoria</strong>: uma categoria é composta de três coisas:</p>
+</div>
+<div class="section" id="espacos-vetoriais">
+<h2>Espaços Vetoriais<a class="headerlink" href="#espacos-vetoriais" title="Permalink to this headline">¶</a></h2>
+<p><strong>Espaço vetorial ou espaço linear</strong>: um espaço vetorial <span class="math notranslate nohighlight">\(V\)</span> sobre o campo (ou corpo) <span class="math notranslate nohighlight">\(\mathbb{K}\)</span> é um conjunto que possui deﬁnidas as operações de adição e multiplicação por um elemento de <span class="math notranslate nohighlight">\(\mathbb{K}\)</span>.</p>
+<p><strong>Escalar</strong>: é um elemento de um campo <span class="math notranslate nohighlight">\(\mathbb{K}\)</span>, usualmente os campos dos <span class="math notranslate nohighlight">\(\mathbb{R}\)</span> ou <span class="math notranslate nohighlight">\(\mathbb{C}\)</span> são os mais utilizados na física.</p>
+<p><strong>Vetores</strong>: são elementos de um campo vetorial <span class="math notranslate nohighlight">\(V\)</span> satisfazendo as seguintes condições:</p>
 <ol class="simple">
-<li><p>uma classe <span class="math notranslate nohighlight">\(\mathcal{O}\)</span>, cujos elementos são chamados de objetos;</p></li>
-<li><p>um conjunto <span class="math notranslate nohighlight">\(Mor(A,B)\)</span>, cujos elementos são chamados de morfismos de <span class="math notranslate nohighlight">\(A\)</span> para <span class="math notranslate nohighlight">\(B\)</span>, onde <span class="math notranslate nohighlight">\(A\)</span> e <span class="math notranslate nohighlight">\(B\)</span> são dois objetos (ou seja, atribui para cada elemento de <span class="math notranslate nohighlight">\(A\)</span> algum elemento de <span class="math notranslate nohighlight">\(B\)</span>);</p></li>
-<li><p>uma regras que atribui, dados quaisquer objetos <span class="math notranslate nohighlight">\(A\)</span>, <span class="math notranslate nohighlight">\(B\)</span> e <span class="math notranslate nohighlight">\(C\)</span>, morfismos, <span class="math notranslate nohighlight">\(\phi\)</span> de <span class="math notranslate nohighlight">\(A\)</span> para <span class="math notranslate nohighlight">\(B\)</span> e <span class="math notranslate nohighlight">\(\psi\)</span> de <span class="math notranslate nohighlight">\(B\)</span> para <span class="math notranslate nohighlight">\(C\)</span>, um morfismo, escrito <span class="math notranslate nohighlight">\(\psi \circ \phi\)</span> ou <span class="math notranslate nohighlight">\(\psi \phi\)</span> de <span class="math notranslate nohighlight">\(A\)</span> para <span class="math notranslate nohighlight">\(C\)</span>, chamado de composição de <span class="math notranslate nohighlight">\(\phi\)</span> com <span class="math notranslate nohighlight">\(\psi\)</span> sujeitos as seguintes condições:</p></li>
+<li><p><span class="math notranslate nohighlight">\(u + v = v + u\)</span>;</p></li>
+<li><p><span class="math notranslate nohighlight">\((u + v) + w = u + (v + w)\)</span>;</p></li>
+<li><p>Existe um vetor nulo <span class="math notranslate nohighlight">\(0\)</span> tal que <span class="math notranslate nohighlight">\(v + 0 = v\)</span>;</p></li>
+<li><p>Para todo <span class="math notranslate nohighlight">\(u\)</span> existe a inversa <span class="math notranslate nohighlight">\(−u\)</span> tal que <span class="math notranslate nohighlight">\(u + (−u) = −u + u = 0\)</span>;</p></li>
+<li><p><span class="math notranslate nohighlight">\(c(u + v) = cu + cv\)</span>;</p></li>
+<li><p><span class="math notranslate nohighlight">\((c + d)u = cu + du\)</span>;</p></li>
+<li><p>(<span class="math notranslate nohighlight">\(cd)u = c(du)\)</span>;</p></li>
+<li><p><span class="math notranslate nohighlight">\(1u = u\)</span>;</p></li>
 </ol>
-<ul class="simple">
-<li><p>Associatividade: dados os objetos <span class="math notranslate nohighlight">\(A\)</span>, <span class="math notranslate nohighlight">\(B\)</span>, <span class="math notranslate nohighlight">\(C\)</span> e <span class="math notranslate nohighlight">\(D\)</span>, os morfismos <span class="math notranslate nohighlight">\(\phi: A \rightarrow B\)</span>, <span class="math notranslate nohighlight">\(\psi: B \rightarrow C\)</span> e <span class="math notranslate nohighlight">\(\lambda: C \rightarrow D\)</span>, então <span class="math notranslate nohighlight">\(\left( \lambda \circ \psi \right) \circ \phi = \lambda \circ \left( \psi \circ \phi \right)\)</span>;</p></li>
-<li><p>Existência da identidade: para cada objeto <span class="math notranslate nohighlight">\(A\)</span> existe um morfismo <span class="math notranslate nohighlight">\(i_{A}\)</span> de <span class="math notranslate nohighlight">\(A\)</span> para <span class="math notranslate nohighlight">\(A\)</span> (chamado de morfismo de identidade sobre <span class="math notranslate nohighlight">\(A\)</span>) com a propriedadeL se <span class="math notranslate nohighlight">\(\phi: A \rightarrow B \Rightarrow \phi \circ i_{A} = \phi\)</span>; se <span class="math notranslate nohighlight">\(\mu : C \rightarrow A \Rightarrow i_{A} \circ \mu = \mu\)</span>.</p></li>
-</ul>
-<p>Seja <span class="math notranslate nohighlight">\(\phi\)</span> um morfismo de <span class="math notranslate nohighlight">\(A\)</span> para <span class="math notranslate nohighlight">\(B\)</span>:</p>
-<p><strong>Monomorfismo</strong>: <span class="math notranslate nohighlight">\(\phi\)</span> é um monomorfismo se: dado qualquer objeto <span class="math notranslate nohighlight">\(X\)</span> e quaisquer dois morfismos <span class="math notranslate nohighlight">\(\alpha\)</span> e <span class="math notranslate nohighlight">\(\alpha'\)</span>, de <span class="math notranslate nohighlight">\(X\)</span> para <span class="math notranslate nohighlight">\(A\)</span> tal que <span class="math notranslate nohighlight">\(\phi \circ \alpha = \phi \circ \alpha'\)</span>, segue que <span class="math notranslate nohighlight">\(\alpha = \alpha'\)</span>.</p>
-<p><strong>Epimorfismo</strong>: …</p>
+<p>onde <span class="math notranslate nohighlight">\(u, v, w \in V\)</span>, <span class="math notranslate nohighlight">\(c, d \in K\)</span> e <span class="math notranslate nohighlight">\(1\)</span> é o elemento unitário de <span class="math notranslate nohighlight">\(\mathbb{K}\)</span>.</p>
+<p><strong>Dependência linear</strong>: para <span class="math notranslate nohighlight">\(x_{i} \in \mathbb{K}\)</span>, <span class="math notranslate nohighlight">\(v_{i} \in V\)</span> e <span class="math notranslate nohighlight">\(x_{i} v_{i} = 0\)</span>. Se existe uma solução não-trivial, <span class="math notranslate nohighlight">\(x_{i} \ne 0\)</span>, então o conjunto de todos <span class="math notranslate nohighlight">\(\lbrace v_{i} \rbrace\)</span> são linearmente independentes. Se existe somente uma solução trivial, <span class="math notranslate nohighlight">\(x_{i} = 0\)</span>, então o conjunto de todos <span class="math notranslate nohighlight">\(\lbrace v_{i} \rbrace\)</span> são linearmente independentes.</p>
+<p><strong>Base</strong>: um conjunto de vetores linearmente independentes <span class="math notranslate nohighlight">\(\lbrace e_{i} \rbrace\)</span> é dito ser uma base de um espeço vetorial <span class="math notranslate nohighlight">\(V\)</span> se qualquer <span class="math notranslate nohighlight">\(v \in V\)</span> pode ser escrito como uma combinação linear de <span class="math notranslate nohighlight">\(\lbrace e_{i} \rbrace\)</span>, <span class="math notranslate nohighlight">\(v = v_{i} e_{i}\)</span>.</p>
+<p><strong>Componentes</strong>: dado <span class="math notranslate nohighlight">\(v \in V\)</span> e seja <span class="math notranslate nohighlight">\(\lbrace e_{i} \rbrace\)</span> a base de <span class="math notranslate nohighlight">\(V\)</span>. Os elementos <span class="math notranslate nohighlight">\(v_{i} \in v\)</span> são ditos ser os componentes de <span class="math notranslate nohighlight">\(v\)</span> com respeito a base <span class="math notranslate nohighlight">\(\lbrace e_{i} \rbrace\)</span>.</p>
+<p><strong>Dimensão</strong>: a dimensão de um espaço vetorial <span class="math notranslate nohighlight">\(dimV\)</span> é o número de elementos que compõem a base do espaço vetorial <span class="math notranslate nohighlight">\(V\)</span>, usualmente denotado como <span class="math notranslate nohighlight">\(V = V(n, \mathbb{K})\)</span>.</p>
+<p><strong>Mapa linear</strong>: dados dois espaços vetoriais <span class="math notranslate nohighlight">\(V\)</span> e <span class="math notranslate nohighlight">\(W\)</span> . Um mapa <span class="math notranslate nohighlight">\(\phi: V \rightarrow W\)</span> é dito linear se satisfaz:</p>
+<div class="math notranslate nohighlight">
+\[\phi(a_{1} v_{1} + a_{2} v_{2} ) = a_{1} \phi(v_{1} ) + a_{2} \phi(v_{2} ), \forall a_{1} , a_{2} \in \mathbb{K} \text{ e } v_{1} , v_{2} \in V.\]</div>
+<p><strong>Isomorﬁsmo</strong>: um mapa <span class="math notranslate nohighlight">\(\phi: V \rightarrow W\)</span> é chamado de isomorﬁsmo se admite inversa.</p>
+<p><strong>Endomorﬁsmo</strong>: um mapa <span class="math notranslate nohighlight">\(\phi: V \rightarrow V\)</span> é chamado de endomorﬁsmo.</p>
+<p><strong>Automorﬁsmo</strong>: um isomorﬁsmo de um espaço vetorial sobre si mesmo é chamado de automorﬁsmo, ou seja, é um endomorﬁsmo que admite inversa.</p>
+<p><strong>Imagem</strong>: o subconjunto <span class="math notranslate nohighlight">\(\phi(V) \subset W\)</span> é dito ser a imagem de <span class="math notranslate nohighlight">\(\phi\)</span>, <span class="math notranslate nohighlight">\(Im phi\)</span>.</p>
+<p><strong>Kernel</strong>: o kernel do mapa <span class="math notranslate nohighlight">\(\phi : V → W\)</span>, denotado como <span class="math notranslate nohighlight">\(ker(\phi)\)</span>, é o conjunto <span class="math notranslate nohighlight">\(\lbrace v \in V \vert \phi(v) = 0 \rbrace\)</span>, onde <span class="math notranslate nohighlight">\(0\)</span> é o
+elemento neutro de <span class="math notranslate nohighlight">\(W\)</span>.</p>
+<p><strong>Espaço vetorial dual</strong>: seja <span class="math notranslate nohighlight">\(\phi : V \rightarrow \mathbb{K}\)</span>, onde <span class="math notranslate nohighlight">\(V(n, \mathbb{K})\)</span> tem uma base <span class="math notranslate nohighlight">\(\lbrace e_{i} \rbrace\)</span>. Temos que para qualquer <span class="math notranslate nohighlight">\(v = v^{i} e_{i}\)</span> e <span class="math notranslate nohighlight">\(\phi(v^{i} ) = v^{i} \phi(e_{i} )\)</span> devido a linearidade do mapa. O espaço vetorial <span class="math notranslate nohighlight">\(\phi(v)\)</span> é chamado de espaço vetorial dual a <span class="math notranslate nohighlight">\(V (n, \mathbb{K})\)</span>, denotado como <span class="math notranslate nohighlight">\(V^{∗} = V^{∗} (n, \mathbb{K})\)</span>.</p>
+<p><strong>Base dual</strong>: é a base que gera <span class="math notranslate nohighlight">\(V^{∗}\)</span> , denotada como <span class="math notranslate nohighlight">\(\lbrace e^{∗i} \rbrace\)</span>. É uma função linear de <span class="math notranslate nohighlight">\(\lbrace e_{i} \rbrace\)</span>, <span class="math notranslate nohighlight">\(e^{∗i} (e_{j} ) = \delta_{j}^{i}\)</span>.</p>
+<p><strong>Vetor dual</strong>: é o componente de <span class="math notranslate nohighlight">\(V^{∗}\)</span>, <span class="math notranslate nohighlight">\(\phi = \phi_{i} e^{∗i}\)</span>.</p>
+<p><strong>Produto interno 1</strong>: a ação de um vetor dual sobre um vetor é chamada de produto interno, <span class="math notranslate nohighlight">\(\phi(v) = \phi_{i} e^{∗i} v^{j} e_{j} = \phi_{i} v^{j} (e^{∗i} e_{j}) = \phi_{i} v^{i}\)</span>. Este também é denotado como <span class="math notranslate nohighlight">\(&lt;,&gt; : V^{∗} \times V \rightarrow \mathbb{K}\)</span>.</p>
+<p><strong>Pullback de um mapa</strong>: sejam <span class="math notranslate nohighlight">\(\phi\)</span> e <span class="math notranslate nohighlight">\(g\)</span> os mapas tais que <span class="math notranslate nohighlight">\(\phi : V \rightarrow W\)</span> e <span class="math notranslate nohighlight">\(g : W \rightarrow \mathbb{K}\)</span>, onde <span class="math notranslate nohighlight">\(g \in W^{∗}\)</span>. Então o mapa de composição <span class="math notranslate nohighlight">\(g \circ \phi = h\)</span>, onde <span class="math notranslate nohighlight">\(h \in V^{∗}\)</span>, ou <span class="math notranslate nohighlight">\(h(v) = g(\phi(v))\)</span>, onde <span class="math notranslate nohighlight">\(v \in V\)</span>. Disso temos <span class="math notranslate nohighlight">\(\phi^{∗} : W^{∗} \rightarrow V^{∗}\)</span> deﬁnido por <span class="math notranslate nohighlight">\(\phi^{∗} : g \mapsto h = \phi^{∗} (g)\)</span>. O mapa <span class="math notranslate nohighlight">\(h\)</span> é chamado de pullback de <span class="math notranslate nohighlight">\(g\)</span> por <span class="math notranslate nohighlight">\(\phi^{∗}\)</span>.</p>
+</div>
 </div>
 
     <script type="text/x-thebe-config">
