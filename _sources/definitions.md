@@ -40,6 +40,10 @@ chamado de mapa de inclusão, também denotado como $i : A \xhookrightarrow{} X$
 
 ## Espaços Vetoriais
 
+**Anel**: [wikipedia](https://pt.wikipedia.org/wiki/Anel_(matem%C3%A1tica))
+
+**Corpo (Field)**: [wikipedia](https://pt.wikipedia.org/wiki/Corpo_(matem%C3%A1tica))
+
 **Espaço vetorial ou espaço linear**: um espaço vetorial $V$ sobre o campo (ou corpo) $\mathbb{K}$ é um conjunto que possui deﬁnidas as operações de adição e multiplicação por um elemento de $\mathbb{K}$.
 
 **Escalar**: é um elemento de um campo $\mathbb{K}$, usualmente os campos dos $\mathbb{R}$ ou $\mathbb{C}$ são os mais utilizados na física.
