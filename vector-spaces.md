@@ -156,3 +156,13 @@ w_{i} &= g_{ij}w^{j} \\
 ```
 
 <br/>
+
+3 - Seja $G: W \rightarrow W^{*}$, onde seus elementos são dados por $ g_{ij} = \begin{pmatrix} 1 & 0 \\ 0 & r^{2} \end{pmatrix}$ (ver problema 2). $G$ é um elemento do grupo de matrices linerares $GL(2,\mathbb{R})$. Mostre que isso faz com que $W$ e $W^{*}$ sejam isomórficos.
+
+<br/>
+
+4 - Mostre que os mapas $\eta$ e $g$ do problema acima definem produtos internos em $V$ e $W$ respectivamente.
+
+<br/>
+
+5 - Considere o espaço Euclidiano tri-dimensional em coordenadas cartesianas. Encontre o tensor métrico de um novo espaço em coordenadas cilíndricas.
