@@ -3,10 +3,10 @@
 format: jb-book
 root: intro
 parts:
-  - caption: 1. Mapas, Variedades e Tensores
+  - caption: 1. Preliminares matemáticas
     chapters:
     - file: maps
-    - file: differentiable-manifolds-nb
+    - file: vector-spaces
     - file: metric-tensor-fields
   - caption: Apêndices
     chapters:
