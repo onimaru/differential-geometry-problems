@@ -381,6 +381,30 @@ f^{*}(dx^{1} \wedge dx^{2}) &amp;= \left(d(1 + x^{2} - a(x^{1})^{2})\right) \wed
 <p><strong>Solução</strong>:</p>
 <p>(iii) Considere o tensor métrico de <span class="math notranslate nohighlight">\(\mathbb{E}^{2}\)</span>, <span class="math notranslate nohighlight">\(g = dx^{1} \otimes dx^{1} + dx^{2} \otimes dx^{2}\)</span>. Encontre <span class="math notranslate nohighlight">\(f^{*}(g)\)</span>.</p>
 <p><strong>Solução</strong>:</p>
+<br/>
+<p>5 - Considere o espaço Euclidiano bi-dimensional e o tensor métrico em coordenadas polares <span class="math notranslate nohighlight">\(g = dr \otimes dr + r^{2} d \theta \otimes d \theta\)</span>. Seja <span class="math notranslate nohighlight">\(u \in \mathbb{R}\)</span> e <span class="math notranslate nohighlight">\(R &gt; 0\)</span>. Considere a transformação <span class="math notranslate nohighlight">\((r, \theta) \mapsto (e^{u/R},\theta)\)</span>. Encontre o tensor métrico.</p>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+<strong>Solução</strong>:<div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text">Nesse caso a transformação ocorre apenas em <span class="math notranslate nohighlight">\(r\)</span>, isso nos permite verificar apenas qual é a transformação de <span class="math notranslate nohighlight">\(dr\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[dr = \left(\frac{\partial}{\partial r}e^{u/R} \right)du = \frac{e^{u/R}}{R}du.\]</div>
+<p class="card-text">O novo tensor métrico então assume a forma:</p>
+<div class="math notranslate nohighlight">
+\[g^{'} = \frac{e^{2u/R}}{R^{2}}\left(du \otimes du + R^{2} d \theta \otimes d \theta\right)\]</div>
+<p class="card-text">Esse tipo de transformação é chamada de <em>conforme</em>, resulta apenas em uma alteração de escala do tensor métrico original.</p>
+</div>
+</details><br/>
+<p>6 - Considere o espaço Euclidiano tri-dimensional. Seja a 3-forma diferencial <span class="math notranslate nohighlight">\(\Omega = dx^{1} \wedge dx^{2} \wedge dx^{3}\)</span> no <span class="math notranslate nohighlight">\(\mathbb{R}^{3}\)</span>. Expresse a 3-forma diferencial em coordenadas esféricas.</p>
+<br/>
+<p>7 - Sejam <span class="math notranslate nohighlight">\(a &gt; 0\)</span> e <span class="math notranslate nohighlight">\(r &gt; 0\)</span>. Encontre a curvatura Gaussiana para o toro dado pela parametrização:</p>
+<div class="math notranslate nohighlight">
+\[(x^{1},x^{2},x^{3}) \mapsto \left( (a+r \cos{u^{1}}) \cos{u^{2}}, (a+r \cos{u^{1}}) \sin{u^{2}}, r \sin{u^{1}} \right),\]</div>
+<p>onde <span class="math notranslate nohighlight">\(0 &lt; u^{1} &lt; 2 \pi\)</span> e <span class="math notranslate nohighlight">\(0 &lt; u^{2} &lt; 2 \pi\)</span>.</p>
 </div>
 
     <script type="text/x-thebe-config">

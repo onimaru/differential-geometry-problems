@@ -172,9 +172,31 @@ f^{*}(dx^{1} \wedge dx^{2}) &= \left(d(1 + x^{2} - a(x^{1})^{2})\right) \wedge \
 
 **Solução**:
 
+<br/>
 
+5 - Considere o espaço Euclidiano bi-dimensional e o tensor métrico em coordenadas polares $g = dr \otimes dr + r^{2} d \theta \otimes d \theta$. Seja $u \in \mathbb{R}$ e $R > 0$. Considere a transformação $(r, \theta) \mapsto (e^{u/R},\theta)$. Encontre o tensor métrico.
 
+```{dropdown} **Solução**: 
 
+Nesse caso a transformação ocorre apenas em $r$, isso nos permite verificar apenas qual é a transformação de $dr$:
 
+$$dr = \left(\frac{\partial}{\partial r}e^{u/R} \right)du = \frac{e^{u/R}}{R}du.$$
 
+O novo tensor métrico então assume a forma:
 
+$$g^{'} = \frac{e^{2u/R}}{R^{2}}\left(du \otimes du + R^{2} d \theta \otimes d \theta\right)$$
+
+Esse tipo de transformação é chamada de *conforme*, resulta apenas em uma alteração de escala do tensor métrico original.
+
+```
+<br/>
+
+6 - Considere o espaço Euclidiano tri-dimensional. Seja a 3-forma diferencial $\Omega = dx^{1} \wedge dx^{2} \wedge dx^{3}$ no $\mathbb{R}^{3}$. Expresse a 3-forma diferencial em coordenadas esféricas.
+
+<br/>
+
+7 - Sejam $a > 0$ e $r > 0$. Encontre a curvatura Gaussiana para o toro dado pela parametrização:
+
+$$(x^{1},x^{2},x^{3}) \mapsto \left( (a+r \cos{u^{1}}) \cos{u^{2}}, (a+r \cos{u^{1}}) \sin{u^{2}}, r \sin{u^{1}} \right),$$
+
+onde $0 < u^{1} < 2 \pi$ e $0 < u^{2} < 2 \pi$.
