@@ -166,3 +166,10 @@ w_{i} &= g_{ij}w^{j} \\
 <br/>
 
 5 - Considere o espaço Euclidiano tri-dimensional em coordenadas cartesianas. Encontre o tensor métrico de um novo espaço em coordenadas cilíndricas.
+
+<br/>
+
+6 - Considere o espaço Euclidiano tri-dimensional. Encontre o tensor métrico em coordenadas esféricas.
+
+<br/>
+

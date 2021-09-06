@@ -200,3 +200,7 @@ Esse tipo de transformação é chamada de *conforme*, resulta apenas em uma alt
 $$(x^{1},x^{2},x^{3}) \mapsto \left( (a+r \cos{u^{1}}) \cos{u^{2}}, (a+r \cos{u^{1}}) \sin{u^{2}}, r \sin{u^{1}} \right),$$
 
 onde $0 < u^{1} < 2 \pi$ e $0 < u^{2} < 2 \pi$.
+
+<br/>
+
+8 - Encontre os símbolos de Christoffel para coordenadas polares.
