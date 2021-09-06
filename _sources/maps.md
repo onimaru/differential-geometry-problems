@@ -61,3 +61,50 @@ Já para o caso da multiplicação $ab = a \cdot b$, temos $f(a \cdot b) = (a \c
 ```
 <br/>
 
+## Variedades diferenciaveis
+
+
+1 - Mostre que a função $f : \mathbb{R} \rightarrow \mathbb{R}$, $f(s) = s^{3}$, define uma estrutura $C^{\infty}$ sobre $\mathbb{R}$ diferente da usual (aquela do atlas $\lbrace (\mathbb{R}, id_{\mathbb{R}}) \rbrace$).  
+
+```{dropdown} **Solução**:
+
+No atlas usual $\lbrace (\mathbb{R}, id_{\mathbb{R}}) \rbrace$, o mapa $f: \mathbb{R}_{f} \rightarrow \mathbb{R}_{id}$ é um difeomorfismo, então devemos mostrar que o mapa proposto tem uma estrutura diferente.
+
+O primeiro ponto é que existe um mapa inverso $f^{-1}(s) = \sqrt[3]{s}$, então $f$ é um homeomorfismo. Assim a estrutura definida por $\lbrace (\mathbb{R},f) \rbrace$ é um atlas para $\mathbb{R}$. Essa estrutura difere do atlas usual no sentido de que não é um difeomorfismo, pois $f^{-1}$ não é diferenciável em $s=0$.
+```
+
+<br/>
+
+2 - Sejam $U$ e $V$ dois subconjuntos abertos do círculo unitário $S^{1}$ de $\mathbb{R}^{2}$ dados por:
+
+$$U = \lbrace (\cos{\theta},\sin{\theta} \vert \theta \in (0,2 \pi))\rbrace, \ \ \ V = \lbrace (\cos{\theta},\sin{\theta} \vert \theta \in (-\pi,\pi))\rbrace.$$
+
+Mostre que $\mathcal{A} = \lbrace (U,f), (V,g) \rbrace$, onde 
+
+$$f: U \rightarrow \mathbb{R},\ \ \ f(\cos{\theta},\sin{\theta})=\theta,\ \ \ \theta  \in (0,2 \pi) \\ g: V \rightarrow \mathbb{R},\ \ \ f(\cos{\theta},\sin{\theta})=\theta,\ \ \ \theta  \in (-\pi,\pi),$$
+
+é um atlas sobre $S^{1}$.
+
+**Solução**:
+
+<br/>
+
+3 - Defina um atlas na superfície cilíndrica
+
+$$M = \lbrace (x,y,z) \in \mathbb{R}^{3} \vert x^{2} + y^{2} = r^{2},\ 0 < z < h \rbrace,$$
+
+onde $h,r \in \mathbb{R}_{\ge 0}$.
+
+**Solução**:
+
+<br/>
+
+4 - Prove que se $h: \mathbb{R}^{n} \rightarrow \mathbb{R}^{n}$ é um homemomorfismo, então o atlas $\lbrace (\mathbb{R}^{n}, h) \rbrace$ define a estrutura diferencial usual sobre $\mathbb{R}^{n}$ ((aquela definida pelo atlas $\lbrace (\mathbb{R}^{n}, id_{\mathbb{R}^{n}}) \rbrace$) se e somente se $h$ e $h^{-1}$ são diferenciaveis.  
+
+**Solução**:
+
+<br/>
+
+5 - Considere o mapa: $f: \mathbb{R}^{2} \rightarrow \mathbb{R},\ \ \ (x,y) \Rightarrow x^{3} + xy + y^{3} + 1$  
+   1. Calcule o mapa $f_{*}: T_{p}\mathbb{R}^{2} \rightarrow T_{p(p)}\mathbb{R}$.  
+   2. Para quais dos pontos $(0,0),\ (1/3,1/3),\ (-1/3,-1/3)$, é $f_{*}$ é injetiva or sobrejetiva?

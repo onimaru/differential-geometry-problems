@@ -92,3 +92,58 @@ elemento neutro de $W$.
 **Produto interno 1**: a ação de um vetor dual sobre um vetor é chamada de produto interno, $\phi(v) = \phi_{i} e^{∗i} v^{j} e_{j} = \phi_{i} v^{j} (e^{∗i} e_{j}) = \phi_{i} v^{i}$. Este também é denotado como $<,> : V^{∗} \times V \rightarrow \mathbb{K}$.
 
 **Pullback de um mapa**: sejam $\phi$ e $g$ os mapas tais que $\phi : V \rightarrow W$ e $g : W \rightarrow \mathbb{K}$, onde $g \in W^{∗}$. Então o mapa de composição $g \circ \phi = h$, onde $h \in V^{∗}$, ou $h(v) = g(\phi(v))$, onde $v \in V$. Disso temos $\phi^{∗} : W^{∗} \rightarrow V^{∗}$ deﬁnido por $\phi^{∗} : g \mapsto h = \phi^{∗} (g)$. O mapa $h$ é chamado de pullback de $g$ por $\phi^{∗}$.
+
+## Álgebras
+
+**Álgebra**: consiste de um espaço vetorial $\mathcal{A}$ sobre um campo (ou corpo) $\mathbb{K}$ junto com uma lei de composição
+ou produto de vetores, $\mathcal{A} \times \mathcal{A} → \mathcal{A}$, denotado por
+
+$$(A, B) \rightarrow AB \in \mathcal{A}\ \ \  (A, B \in \mathcal{A}),$$
+
+que satisfaz um par de leis distributivas:
+
+$$A(aB + bC) = aAB + bAC,\\
+(aA + bB)C = aAC + bBC$$
+
+para todos os escalares $a, b \in \mathbb{K}$ e vetores, $A, B$ e $C$. Sendo $O$ o vetor zero e $0$ o zero escalar tem-se
+
+$$OA = (0A)A = 0(AA) = O e AO = A(0A) = 0AA = O.$$
+
+**Derivação em uma álgebra**: uma derivação em uma álgebra $\mathcal{A}$ é um mapa $\theta : \mathcal{A} \rightarrow \mathcal{A}$ satisfazendo
+
+$$\theta(AB) = \theta(A)B + A \theta(B).$$
+
+**Homomorﬁsmo de uma álgebra**: sejam $\mathcal{A}$ e $\mathcal{B}$ qualquer par de álgebras. Um mapa linear $\phi : \mathcal{A} \rightarrow \mathcal{B}$
+é chamado de homomorﬁsmo de álgebra se preserva os produtos,
+
+$$\phi(AB) = \phi(A)\phi(B),$$
+
+onde $A,B \in \mathcal{A}$ e $\phi(A), \phi(B) \in \mathcal{B}$.
+
+**Derivação de um homomorﬁsmo**: seja $\phi : \mathcal{A} \rightarrow \mathcal{B}$ um hohomorﬁsmo de álgebras. Então uma
+derivação-$\phi$ ou simplesmente $\phi_{∗}$ é um mapa linear $\theta : \mathcal{A} \rightarrow \mathcal{B}$ que satisfaz $\theta(AB) = \theta(A)\phi(B) + \phi(A)\theta(B)$.
+
+**Álgebra graduada**: uma álgebra graduada $\mathcal{A}$ sobre $\mathbb{R}$ é um espaço vetorial graduado $A = \sum_{p \ge 0}A^{p}$ (soma direta), junto com uma estrutura algébrica, tal que $A^{p} \cdot A^{q} \subset A^{p+q}$.
+
+**Álgebra associativa**: se $A(BC) = (AB)C$ para todos $A, B, C \in \mathcal{A}$ a álgebra é dita associativa.
+
+**Álgebra comutativa**: se $AB = BA$ para todos $A, B \in \mathcal{A}$ a álgebra é dita comutativa.
+
+**Álgebra anti-comutativa**: se $u \in A^{p}$, $v \in A^{q}$ e $uv = (−1)^{pq} vu$, então a álgebra $\mathcal{A}$ é dita anti-comutativa.
+Se a existe uma identidade e $dim A^{0} = 1$, então $\mathcal{A}$ é chamada de conexa.
+
+**Álgebra dos operadores lineares**: o espaço vetorial $L(V, V)$ dos operadores lineares sobre um espaço vetorial $V$ forma uma álgebra associativa na qual o produto $AB$ é deﬁnido de maneira usual $(AB)u = A(Bu)$. Entretanto esta álgebra não é necessariamente comutativa.
+
+**Álgebra das matrizes n × n reais ou complexas**: o conjunto de todas as matrizes $\mathcal{M}_{n}(\mathbb{K})$, onde o campo pode ser o dos reais ou dos complexos, forma uma álgebra com respeito a multiplicação matricial. Pode-se pensa nesta álgebra como $L(\mathbb{K}_{n}, \mathbb{K}_{n})$ onde $\mathbb{K}_{n}$ é o espaço vetorial dos vetores coluna $n \times 1$.
+
+**Constante de estrutura**: se $\mathcal{A}$ é uma álgebra de dimensão ﬁnita e $E_{1}, E_{2}, ..., E{n}$ é qualquer base, então seja $C_{ij}^{k}$ um conjunto de escalares deﬁnido por
+
+$$E_{i} E_{j} = C_{ij}^{k}E_{k}.$$
+
+Os escalares $C_{ij}^{k} \in \mathbb{K}$, unicamente deﬁnidos como os componentes do vetor $E_{i} E_{j}$ com respeito a base dada
+são chamados de constantes de estrutura da álgebra com respeito a base {$E_{i}$}.
+
+**Produto tensorial canônico**: se $\mathcal{A}$ e $\mathcal{B}$ são duas álgebras graduadas, então $\mathcal{A} \otimes \mathcal{B}$ pode ser uma álgebra graduada da forma $(u_{1} \otimes v_{1} )(u_{2} \otimes v_{2} ) = u_{1} u_{2} \otimes v_{1} v_{2}$ para $u_{1} , u_{2} \in \mathcal{A}$ e $v_{1}, v_{2} \in \mathcal{B}$. Esta álgebra é chamada de produto tensorial canônico.
+
+**Produto tensorial antissimétrico**: para as mesmas deﬁnições anteriores outra álgebra possível é
+$(u_{1} \otimes v_{1} )(u_{2} \otimes v_{2} ) = (−1)^{q_{1} q_{2}} u_{1} u_{2} \otimes v_{1} v_{2}$, chamada produto tensorial antissimétrico.

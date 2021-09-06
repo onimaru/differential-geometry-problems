@@ -227,6 +227,11 @@
    Espaços Vetoriais
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#algebras">
+   Álgebras
+  </a>
+ </li>
 </ul>
 
             </nav>
@@ -298,6 +303,45 @@ elemento neutro de <span class="math notranslate nohighlight">\(W\)</span>.</p>
 <p><strong>Vetor dual</strong>: é o componente de <span class="math notranslate nohighlight">\(V^{∗}\)</span>, <span class="math notranslate nohighlight">\(\phi = \phi_{i} e^{∗i}\)</span>.</p>
 <p><strong>Produto interno 1</strong>: a ação de um vetor dual sobre um vetor é chamada de produto interno, <span class="math notranslate nohighlight">\(\phi(v) = \phi_{i} e^{∗i} v^{j} e_{j} = \phi_{i} v^{j} (e^{∗i} e_{j}) = \phi_{i} v^{i}\)</span>. Este também é denotado como <span class="math notranslate nohighlight">\(&lt;,&gt; : V^{∗} \times V \rightarrow \mathbb{K}\)</span>.</p>
 <p><strong>Pullback de um mapa</strong>: sejam <span class="math notranslate nohighlight">\(\phi\)</span> e <span class="math notranslate nohighlight">\(g\)</span> os mapas tais que <span class="math notranslate nohighlight">\(\phi : V \rightarrow W\)</span> e <span class="math notranslate nohighlight">\(g : W \rightarrow \mathbb{K}\)</span>, onde <span class="math notranslate nohighlight">\(g \in W^{∗}\)</span>. Então o mapa de composição <span class="math notranslate nohighlight">\(g \circ \phi = h\)</span>, onde <span class="math notranslate nohighlight">\(h \in V^{∗}\)</span>, ou <span class="math notranslate nohighlight">\(h(v) = g(\phi(v))\)</span>, onde <span class="math notranslate nohighlight">\(v \in V\)</span>. Disso temos <span class="math notranslate nohighlight">\(\phi^{∗} : W^{∗} \rightarrow V^{∗}\)</span> deﬁnido por <span class="math notranslate nohighlight">\(\phi^{∗} : g \mapsto h = \phi^{∗} (g)\)</span>. O mapa <span class="math notranslate nohighlight">\(h\)</span> é chamado de pullback de <span class="math notranslate nohighlight">\(g\)</span> por <span class="math notranslate nohighlight">\(\phi^{∗}\)</span>.</p>
+</div>
+<div class="section" id="algebras">
+<h2>Álgebras<a class="headerlink" href="#algebras" title="Permalink to this headline">¶</a></h2>
+<p><strong>Álgebra</strong>: consiste de um espaço vetorial <span class="math notranslate nohighlight">\(\mathcal{A}\)</span> sobre um campo (ou corpo) <span class="math notranslate nohighlight">\(\mathbb{K}\)</span> junto com uma lei de composição
+ou produto de vetores, <span class="math notranslate nohighlight">\(\mathcal{A} \times \mathcal{A} → \mathcal{A}\)</span>, denotado por</p>
+<div class="math notranslate nohighlight">
+\[(A, B) \rightarrow AB \in \mathcal{A}\ \ \  (A, B \in \mathcal{A}),\]</div>
+<p>que satisfaz um par de leis distributivas:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}A(aB + bC) = aAB + bAC,\\
+(aA + bB)C = aAC + bBC\end{split}\]</div>
+<p>para todos os escalares <span class="math notranslate nohighlight">\(a, b \in \mathbb{K}\)</span> e vetores, <span class="math notranslate nohighlight">\(A, B\)</span> e <span class="math notranslate nohighlight">\(C\)</span>. Sendo <span class="math notranslate nohighlight">\(O\)</span> o vetor zero e <span class="math notranslate nohighlight">\(0\)</span> o zero escalar tem-se</p>
+<div class="math notranslate nohighlight">
+\[OA = (0A)A = 0(AA) = O e AO = A(0A) = 0AA = O.\]</div>
+<p><strong>Derivação em uma álgebra</strong>: uma derivação em uma álgebra <span class="math notranslate nohighlight">\(\mathcal{A}\)</span> é um mapa <span class="math notranslate nohighlight">\(\theta : \mathcal{A} \rightarrow \mathcal{A}\)</span> satisfazendo</p>
+<div class="math notranslate nohighlight">
+\[\theta(AB) = \theta(A)B + A \theta(B).\]</div>
+<p><strong>Homomorﬁsmo de uma álgebra</strong>: sejam <span class="math notranslate nohighlight">\(\mathcal{A}\)</span> e <span class="math notranslate nohighlight">\(\mathcal{B}\)</span> qualquer par de álgebras. Um mapa linear <span class="math notranslate nohighlight">\(\phi : \mathcal{A} \rightarrow \mathcal{B}\)</span>
+é chamado de homomorﬁsmo de álgebra se preserva os produtos,</p>
+<div class="math notranslate nohighlight">
+\[\phi(AB) = \phi(A)\phi(B),\]</div>
+<p>onde <span class="math notranslate nohighlight">\(A,B \in \mathcal{A}\)</span> e <span class="math notranslate nohighlight">\(\phi(A), \phi(B) \in \mathcal{B}\)</span>.</p>
+<p><strong>Derivação de um homomorﬁsmo</strong>: seja <span class="math notranslate nohighlight">\(\phi : \mathcal{A} \rightarrow \mathcal{B}\)</span> um hohomorﬁsmo de álgebras. Então uma
+derivação-<span class="math notranslate nohighlight">\(\phi\)</span> ou simplesmente <span class="math notranslate nohighlight">\(\phi_{∗}\)</span> é um mapa linear <span class="math notranslate nohighlight">\(\theta : \mathcal{A} \rightarrow \mathcal{B}\)</span> que satisfaz <span class="math notranslate nohighlight">\(\theta(AB) = \theta(A)\phi(B) + \phi(A)\theta(B)\)</span>.</p>
+<p><strong>Álgebra graduada</strong>: uma álgebra graduada <span class="math notranslate nohighlight">\(\mathcal{A}\)</span> sobre <span class="math notranslate nohighlight">\(\mathbb{R}\)</span> é um espaço vetorial graduado <span class="math notranslate nohighlight">\(A = \sum_{p \ge 0}A^{p}\)</span> (soma direta), junto com uma estrutura algébrica, tal que <span class="math notranslate nohighlight">\(A^{p} \cdot A^{q} \subset A^{p+q}\)</span>.</p>
+<p><strong>Álgebra associativa</strong>: se <span class="math notranslate nohighlight">\(A(BC) = (AB)C\)</span> para todos <span class="math notranslate nohighlight">\(A, B, C \in \mathcal{A}\)</span> a álgebra é dita associativa.</p>
+<p><strong>Álgebra comutativa</strong>: se <span class="math notranslate nohighlight">\(AB = BA\)</span> para todos <span class="math notranslate nohighlight">\(A, B \in \mathcal{A}\)</span> a álgebra é dita comutativa.</p>
+<p><strong>Álgebra anti-comutativa</strong>: se <span class="math notranslate nohighlight">\(u \in A^{p}\)</span>, <span class="math notranslate nohighlight">\(v \in A^{q}\)</span> e <span class="math notranslate nohighlight">\(uv = (−1)^{pq} vu\)</span>, então a álgebra <span class="math notranslate nohighlight">\(\mathcal{A}\)</span> é dita anti-comutativa.
+Se a existe uma identidade e <span class="math notranslate nohighlight">\(dim A^{0} = 1\)</span>, então <span class="math notranslate nohighlight">\(\mathcal{A}\)</span> é chamada de conexa.</p>
+<p><strong>Álgebra dos operadores lineares</strong>: o espaço vetorial <span class="math notranslate nohighlight">\(L(V, V)\)</span> dos operadores lineares sobre um espaço vetorial <span class="math notranslate nohighlight">\(V\)</span> forma uma álgebra associativa na qual o produto <span class="math notranslate nohighlight">\(AB\)</span> é deﬁnido de maneira usual <span class="math notranslate nohighlight">\((AB)u = A(Bu)\)</span>. Entretanto esta álgebra não é necessariamente comutativa.</p>
+<p><strong>Álgebra das matrizes n × n reais ou complexas</strong>: o conjunto de todas as matrizes <span class="math notranslate nohighlight">\(\mathcal{M}_{n}(\mathbb{K})\)</span>, onde o campo pode ser o dos reais ou dos complexos, forma uma álgebra com respeito a multiplicação matricial. Pode-se pensa nesta álgebra como <span class="math notranslate nohighlight">\(L(\mathbb{K}_{n}, \mathbb{K}_{n})\)</span> onde <span class="math notranslate nohighlight">\(\mathbb{K}_{n}\)</span> é o espaço vetorial dos vetores coluna <span class="math notranslate nohighlight">\(n \times 1\)</span>.</p>
+<p><strong>Constante de estrutura</strong>: se <span class="math notranslate nohighlight">\(\mathcal{A}\)</span> é uma álgebra de dimensão ﬁnita e <span class="math notranslate nohighlight">\(E_{1}, E_{2}, ..., E{n}\)</span> é qualquer base, então seja <span class="math notranslate nohighlight">\(C_{ij}^{k}\)</span> um conjunto de escalares deﬁnido por</p>
+<div class="math notranslate nohighlight">
+\[E_{i} E_{j} = C_{ij}^{k}E_{k}.\]</div>
+<p>Os escalares <span class="math notranslate nohighlight">\(C_{ij}^{k} \in \mathbb{K}\)</span>, unicamente deﬁnidos como os componentes do vetor <span class="math notranslate nohighlight">\(E_{i} E_{j}\)</span> com respeito a base dada
+são chamados de constantes de estrutura da álgebra com respeito a base {<span class="math notranslate nohighlight">\(E_{i}\)</span>}.</p>
+<p><strong>Produto tensorial canônico</strong>: se <span class="math notranslate nohighlight">\(\mathcal{A}\)</span> e <span class="math notranslate nohighlight">\(\mathcal{B}\)</span> são duas álgebras graduadas, então <span class="math notranslate nohighlight">\(\mathcal{A} \otimes \mathcal{B}\)</span> pode ser uma álgebra graduada da forma <span class="math notranslate nohighlight">\((u_{1} \otimes v_{1} )(u_{2} \otimes v_{2} ) = u_{1} u_{2} \otimes v_{1} v_{2}\)</span> para <span class="math notranslate nohighlight">\(u_{1} , u_{2} \in \mathcal{A}\)</span> e <span class="math notranslate nohighlight">\(v_{1}, v_{2} \in \mathcal{B}\)</span>. Esta álgebra é chamada de produto tensorial canônico.</p>
+<p><strong>Produto tensorial antissimétrico</strong>: para as mesmas deﬁnições anteriores outra álgebra possível é
+<span class="math notranslate nohighlight">\((u_{1} \otimes v_{1} )(u_{2} \otimes v_{2} ) = (−1)^{q_{1} q_{2}} u_{1} u_{2} \otimes v_{1} v_{2}\)</span>, chamada produto tensorial antissimétrico.</p>
 </div>
 </div>
 
