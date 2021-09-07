@@ -107,7 +107,7 @@ $$A(aB + bC) = aAB + bAC,\\
 
 para todos os escalares $a, b \in \mathbb{K}$ e vetores, $A, B$ e $C$. Sendo $O$ o vetor zero e $0$ o zero escalar tem-se
 
-$$OA = (0A)A = 0(AA) = O e AO = A(0A) = 0AA = O.$$
+$$OA = (0A)A = 0(AA) = O \text{ e } AO = A(0A) = 0AA = O.$$
 
 **Derivação em uma álgebra**: uma derivação em uma álgebra $\mathcal{A}$ é um mapa $\theta : \mathcal{A} \rightarrow \mathcal{A}$ satisfazendo
 

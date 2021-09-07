@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>&lt;no title&gt; &#8212; Problemas em Geometria Diferencial</title>
+    <title>Álgebras &#8212; Problemas em Geometria Diferencial</title>
     
   <link href="_static/css/theme.css" rel="stylesheet" />
   <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -54,6 +54,8 @@
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Campos Tensoriais Métricos" href="metric-tensor-fields.html" />
+    <link rel="prev" title="Espaços Vetoriais" href="vector-spaces.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -95,7 +97,7 @@
   1. Preliminares matemáticas
  </span>
 </p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="maps.html">
    Mapas, Curvas, superfícies e Variedades
@@ -106,8 +108,8 @@
    Espaços Vetoriais
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="algebras.html">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
    Álgebras
   </a>
  </li>
@@ -174,7 +176,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="_sources/extras.md"><button type="button"
+        <a class="dropdown-buttons" href="_sources/algebras.md"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
@@ -194,7 +196,7 @@
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/onimaru/differential-geometry-problems/issues/new?title=Issue%20on%20page%20%2Fextras.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/onimaru/differential-geometry-problems/issues/new?title=Issue%20on%20page%20%2Falgebras.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
         
@@ -215,14 +217,6 @@
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show">
             
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Contents
-            </div>
-            <nav id="bd-toc-nav">
-                <ul class="simple visible nav section-nav flex-column">
-</ul>
-
-            </nav>
         </div>
     </div>
 </div>
@@ -231,25 +225,94 @@
         
               <div>
                 
-  <p>8 - Funcional: é uma regra que associa um número a um conjunto de funções: <span class="math notranslate nohighlight">\(f_{1}, f_{2}, ... \rightarrow F[f_{1}, f_{2}]\)</span></p>
-<p>Variação de um funcional: <span class="math notranslate nohighlight">\(\delta F = F[f + \delta f] - F[f]\)</span>, onde <span class="math notranslate nohighlight">\(\delta f(\vec{x}) = \epsilon \eta(\vec{x})\)</span>,onde <span class="math notranslate nohighlight">\(\epsilon\)</span> é infinitesimal e <span class="math notranslate nohighlight">\(\eta\)</span> é uma função arbitrária.</p>
-<p>Derivada de primeira ordem:</p>
+  <div class="section" id="algebras">
+<span id="id1"></span><h1>Álgebras<a class="headerlink" href="#algebras" title="Permalink to this headline">¶</a></h1>
+<p>1 - Considere o conjunto de funções do tipo <span class="math notranslate nohighlight">\(f: \mathbb{R} \rightarrow \mathbb{R}\)</span> e denotado por <span class="math notranslate nohighlight">\(\mathcal{F}\)</span> dotado de um produto <span class="math notranslate nohighlight">\((fg) = f g\)</span> (a multiplicação convencional), onde <span class="math notranslate nohighlight">\(f,g \in \mathcal{F}\)</span>, formam uma álgebra.</p>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+<strong>Solução</strong>:<div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text">Observamos que o produto sde duas funções é também uma funcão, portanto o produto é um mapa <span class="math notranslate nohighlight">\(\mathcal{F} \times \mathcal{F} \rightarrow \mathcal{F}\)</span>.</p>
+<p class="card-text">Verificamos as leis distributivas usando <span class="math notranslate nohighlight">\(\alpha,\beta \in \mathbb{R}\)</span> e <span class="math notranslate nohighlight">\(f,g,h \in \mathcal{F}\)</span>:</p>
 <div class="math notranslate nohighlight">
-\[\frac{d F}{d \epsilon}[f + \epsilon \eta] \vert_{\epsilon = 0} \equiv \int dx_{1} \frac{\delta F[f]}{\delta f(x_{1})} \eta(x_{1}),\]</div>
-<p>onde <span class="math notranslate nohighlight">\(\frac{\delta F[f]}{\delta f(x_{1})}\)</span> é a derivada funcional de primeira ordem.</p>
-<p><strong>Categoria</strong>: uma categoria é composta de três coisas:</p>
-<ol class="simple">
-<li><p>uma classe <span class="math notranslate nohighlight">\(\mathcal{O}\)</span>, cujos elementos são chamados de objetos;</p></li>
-<li><p>um conjunto <span class="math notranslate nohighlight">\(Mor(A,B)\)</span>, cujos elementos são chamados de morfismos de <span class="math notranslate nohighlight">\(A\)</span> para <span class="math notranslate nohighlight">\(B\)</span>, onde <span class="math notranslate nohighlight">\(A\)</span> e <span class="math notranslate nohighlight">\(B\)</span> são dois objetos (ou seja, atribui para cada elemento de <span class="math notranslate nohighlight">\(A\)</span> algum elemento de <span class="math notranslate nohighlight">\(B\)</span>);</p></li>
-<li><p>uma regras que atribui, dados quaisquer objetos <span class="math notranslate nohighlight">\(A\)</span>, <span class="math notranslate nohighlight">\(B\)</span> e <span class="math notranslate nohighlight">\(C\)</span>, morfismos, <span class="math notranslate nohighlight">\(\phi\)</span> de <span class="math notranslate nohighlight">\(A\)</span> para <span class="math notranslate nohighlight">\(B\)</span> e <span class="math notranslate nohighlight">\(\psi\)</span> de <span class="math notranslate nohighlight">\(B\)</span> para <span class="math notranslate nohighlight">\(C\)</span>, um morfismo, escrito <span class="math notranslate nohighlight">\(\psi \circ \phi\)</span> ou <span class="math notranslate nohighlight">\(\psi \phi\)</span> de <span class="math notranslate nohighlight">\(A\)</span> para <span class="math notranslate nohighlight">\(C\)</span>, chamado de composição de <span class="math notranslate nohighlight">\(\phi\)</span> com <span class="math notranslate nohighlight">\(\psi\)</span> sujeitos as seguintes condições:</p></li>
-</ol>
-<ul class="simple">
-<li><p>Associatividade: dados os objetos <span class="math notranslate nohighlight">\(A\)</span>, <span class="math notranslate nohighlight">\(B\)</span>, <span class="math notranslate nohighlight">\(C\)</span> e <span class="math notranslate nohighlight">\(D\)</span>, os morfismos <span class="math notranslate nohighlight">\(\phi: A \rightarrow B\)</span>, <span class="math notranslate nohighlight">\(\psi: B \rightarrow C\)</span> e <span class="math notranslate nohighlight">\(\lambda: C \rightarrow D\)</span>, então <span class="math notranslate nohighlight">\(\left( \lambda \circ \psi \right) \circ \phi = \lambda \circ \left( \psi \circ \phi \right)\)</span>;</p></li>
-<li><p>Existência da identidade: para cada objeto <span class="math notranslate nohighlight">\(A\)</span> existe um morfismo <span class="math notranslate nohighlight">\(i_{A}\)</span> de <span class="math notranslate nohighlight">\(A\)</span> para <span class="math notranslate nohighlight">\(A\)</span> (chamado de morfismo de identidade sobre <span class="math notranslate nohighlight">\(A\)</span>) com a propriedadeL se <span class="math notranslate nohighlight">\(\phi: A \rightarrow B \Rightarrow \phi \circ i_{A} = \phi\)</span>; se <span class="math notranslate nohighlight">\(\mu : C \rightarrow A \Rightarrow i_{A} \circ \mu = \mu\)</span>.</p></li>
-</ul>
-<p>Seja <span class="math notranslate nohighlight">\(\phi\)</span> um morfismo de <span class="math notranslate nohighlight">\(A\)</span> para <span class="math notranslate nohighlight">\(B\)</span>:</p>
-<p><strong>Monomorfismo</strong>: <span class="math notranslate nohighlight">\(\phi\)</span> é um monomorfismo se: dado qualquer objeto <span class="math notranslate nohighlight">\(X\)</span> e quaisquer dois morfismos <span class="math notranslate nohighlight">\(\alpha\)</span> e <span class="math notranslate nohighlight">\(\alpha'\)</span>, de <span class="math notranslate nohighlight">\(X\)</span> para <span class="math notranslate nohighlight">\(A\)</span> tal que <span class="math notranslate nohighlight">\(\phi \circ \alpha = \phi \circ \alpha'\)</span>, segue que <span class="math notranslate nohighlight">\(\alpha = \alpha'\)</span>.</p>
-<p><strong>Epimorfismo</strong>: …</p>
+\[\begin{split}\begin{align*}
+f(\alpha g+\beta h) &amp;= (f \alpha g + f \beta h)\\
+ &amp;= (\alpha fg + \beta fh)\\
+ \text{e}\\
+(\alpha g+\beta h)f &amp;= (\alpha gf + \beta hf).\\
+\end{align*}\end{split}\]</div>
+<p class="card-text">As leis são obedecidas, pois a multiplicação de escalares por funções é comutativa.</p>
+<p class="card-text">Por fim definimos o “vetor zero” como a função <span class="math notranslate nohighlight">\(o \in \mathcal{F}\)</span> definida por <span class="math notranslate nohighlight">\((x) \mapsto (0)\)</span> e o escalar zero como <span class="math notranslate nohighlight">\(0 \in \mathbb{R}\)</span>. Verificamos que</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}of = (0f)f = 0(ff) = o \\ 
+fo = f(0f) = 0ff = o,
+\end{split}\]</div>
+<p class="card-text">ou seja, o produto de uma função com a <span class="math notranslate nohighlight">\(o\)</span> sempre resulta em <span class="math notranslate nohighlight">\(o\)</span>.</p>
+<p class="card-text">Sendo atendidas todas as exigências, vemos que esta construção forma uma álgebra.</p>
+</div>
+</details><br/>
+<p>2 - Sejam <span class="math notranslate nohighlight">\(f,g \in \mathcal{F}\)</span> definidas respectivamente por <span class="math notranslate nohighlight">\((x) \mapsto (x^{2})\)</span> e <span class="math notranslate nohighlight">\((x) \mapsto (x+1)\)</span>. Mostre que o mapa <span class="math notranslate nohighlight">\(\frac{d}{dx}: \mathcal{F} \rightarrow \mathcal{F}\)</span> é uma derivação na álgebra <span class="math notranslate nohighlight">\(\mathcal{F}\)</span>. Cálcule sua ação sobre <span class="math notranslate nohighlight">\((fg)\)</span>.</p>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+<strong>Solução:</strong><div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text">Esse mapa é uma derivação nesta álgebra, pois atende a regra de Leibniz:</p>
+<div class="math notranslate nohighlight">
+\[\frac{d}{dx}(fg) = \frac{df}{dx}g + f\frac{dg}{dx}\]</div>
+<p class="card-text">resultando em:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{align*}
+\frac{d}{dx}(fg) =&amp; \frac{d}{dx}(x^{2}(x+1))\\
+ &amp;= \left(\frac{d}{dx} x^{2}\right)(x+1) + x^{2} \left(\frac{d}{dx}(x+1)\right)\\
+ &amp;= (2x^{2}+2x) + (x^{2})\\
+ &amp;= 3x^{2} +2x.
+\end{align*}\end{split}\]</div>
+</div>
+</details><br/>
+<p>3 - Considere a álgebra formada pelo conjunto de matrizes quadradas <span class="math notranslate nohighlight">\(\mathcal{M}_{n}(\mathbb{R})\)</span> e pelo produto de matrizes. Mostre o determinante <span class="math notranslate nohighlight">\(det: \mathcal{M}_{n}(\mathbb{R}) \rightarrow \mathbb{R}\)</span> é um homomorfismo desta álgebra.</p>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+<strong>Solução</strong>:<div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text">Dadas duas matrizes <span class="math notranslate nohighlight">\(A,B \in \mathcal{M}_{n}(\mathbb{R})\)</span> o determinante  respeita a regra</p>
+<p class="card-text"><span class="math notranslate nohighlight">\(det(AB) = det(A)det(B)\)</span></p>
+<p class="card-text">logo o determinante é um homomorfismo dest álgebra.</p>
+</div>
+</details><br/>
+<p>4 - Construa a derivação do homomorfismo do problema anterior usando o mapa <span class="math notranslate nohighlight">\(\frac{d}{dx}: \mathcal{M}_{n}(\mathbb{R}) \rightarrow \mathcal{M}_{n}(\mathbb{R})\)</span>, sendo que os elementos das matrizes que compõem <span class="math notranslate nohighlight">\(\mathcal{M}_{n}(\mathbb{R})\)</span> são funções de <span class="math notranslate nohighlight">\(x\)</span>.</p>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+<strong>Solução</strong>:<div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{align*}
+\frac{d}{dx}(AB) =&amp; \frac{d}{dx}(A)det(B) + det(A)\frac{d}{dx}(B)\\
+\end{align*}\end{split}\]</div>
+<p class="card-text">onde os termos <span class="math notranslate nohighlight">\(det(B)\)</span> e <span class="math notranslate nohighlight">\(det(A)\)</span> são escalares multiplicando as matrizes resultantes de <span class="math notranslate nohighlight">\(\frac{d}{dx}(A)\)</span> e <span class="math notranslate nohighlight">\(\frac{d}{dx}(B)\)</span> Respectivamente.</p>
+</div>
+</details><br/>
+<p>5 - Sejam <span class="math notranslate nohighlight">\(A,B \in \mathcal{M}_{2}(\mathbb{R})\)</span> definidas por</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}A = \begin{pmatrix}
+\cos{x}&amp; -r \sin{x}\\
+\sin{x}&amp; r \cos{x}\\
+\end{pmatrix}\ \ \ B = \begin{pmatrix}
+1&amp; 0\\
+0&amp; r^{2}\\
+\end{pmatrix}\end{split}\]</div>
+</div>
 
     <script type="text/x-thebe-config">
     {
@@ -276,6 +339,8 @@
         
         <div class='prev-next-bottom'>
             
+    <a class='left-prev' id="prev-link" href="vector-spaces.html" title="previous page">Espaços Vetoriais</a>
+    <a class='right-next' id="next-link" href="metric-tensor-fields.html" title="next page">Campos Tensoriais Métricos</a>
 
         </div>
         
